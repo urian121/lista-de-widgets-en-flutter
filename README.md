@@ -122,7 +122,10 @@ Column y Row son widgets de diseño que permiten crear interfaces flexibles y re
     |                                          |
     +------------------------------------------+
 
+
 ## Row
+El widget Row es muy similar a Column, excepto que el eje en el que se colocan los widgets hijos ya no es vertical, sino horizontal. Le permite integrar una lista de widgets hijos (children). No se pretende crear un desplazamiento horizontal, sino simplemente distribuir estos hijos en el espacio que se le asigna. 
+
     +------------------------------------------+
     |              Row (horizontal)            |
     |  +-----------+-----------+-----------+   |
@@ -448,6 +451,57 @@ Se usaba para crear botones elevados con sombra, pero ha sido reemplazado por El
     |                                          |
     +------------------------------------------+
 
+## El FloatingActionButton (FAB) 
+Es un widget en Flutter que muestra un botón flotante sobre el contenido de la interfaz de usuario. Generalmente, se usa para acciones primarias en una aplicación, como añadir un nuevo elemento o realizar una acción importante.
+
+    class MyApp extends StatelessWidget {
+      @override
+      Widget build(BuildContext context) {
+        return MaterialApp(
+          home: Scaffold(
+            appBar: AppBar(
+              title: Text('Ejemplo FloatingActionButton'),
+            ),
+            body: Center(
+              child: Text('Presiona el botón flotante'),
+            ),
+            floatingActionButton: FloatingActionButton(
+              onPressed: () {
+                // Acción a realizar cuando se presione el botón
+                print('Botón flotante presionado');
+              },
+              child: Icon(Icons.add), // Icono dentro del botón
+              backgroundColor: Colors.blue, // Color de fondo del botón
+            ),
+          ),
+        );
+      }
+    }
+
+    +------------------------------------------+
+    |              AppBar (barra de app)       |
+    |  +------------------------------------+  |
+    |  |      Ejemplo FloatingActionButton  |  |
+    |  +------------------------------------+  |
+    |                                          |
+    |              Center                      |
+    |                                          |
+    |        +-----------------------+         |
+    |        |  Presiona el botón    |         |
+    |        |       flotante        |         |
+    |        +-----------------------+         |
+    |                                          |
+    |                 +------ +                |
+    |                 |  +   |                 |
+    |                 |  +   |                 |
+    |                 |  +   |                 |
+    |                 +------ +                |
+    |                                          |
+    +------------------------------------------+
+
+
+
+
 ## ElevatedButton
 Es un widget en Flutter que crea un botón elevado con sombra, proporcionando un efecto visual de profundidad. Se utiliza para realizar acciones o desencadenar eventos cuando el usuario interactúa con él. Ideal para botones que necesitan destacarse en la interfaz de usuario.
 
@@ -551,6 +605,75 @@ Es un widget en Flutter que proporciona una interfaz visual de contenedor con bo
     |       +------------------------------+   |
     |                                          |
     +------------------------------------------+
+
+## SizedBox
+Añade un espacio fijo entre los widgets. Puedes especificar el ancho y la altura del espacio.
+
+    SizedBox(
+      width: 20.0, // Ancho del espacio
+      height: 20.0, // Altura del espacio
+    )
+
+## Widgets para generar espacios
+SizedBox: Para un espacio fijo en ancho y/o alto
+Spacer: Para espacio flexible y distribuido en Row o Column.
+Padding: Para añadir relleno dentro de un widget.
+Margin: Para añadir margen fuera de un widget, se utiliza dentro de Container.
+
+
+## Spacer
+Es un widget en Flutter que se utiliza dentro de un widget Row, Column, o Flex para crear espacio flexible entre los widgets hijos. A diferencia de Expanded, que expande el hijo para ocupar todo el espacio disponible, Spacer crea un espacio vacío flexible que puede ser utilizado para separar otros widgets de manera proporcional.
+
+    class MyApp extends StatelessWidget {
+      @override
+      Widget build(BuildContext context) {
+        return MaterialApp(
+          home: Scaffold(
+            appBar: AppBar(
+              title: Text('Ejemplo Spacer'),
+            ),
+            body: Row(
+              children: <Widget>[
+                Container(
+                  color: Colors.red,
+                  width: 100,
+                  height: 100,
+                  child: Center(
+                    child: Text('Rojo', style: TextStyle(color: Colors.white)),
+                  ),
+                ),
+                Spacer(),
+                Container(
+                  color: Colors.green,
+                  width: 100,
+                  height: 100,
+                  child: Center(
+                    child: Text('Verde', style: TextStyle(color: Colors.white)),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+      }
+    }
+
+    +------------------------------------------+
+    |              AppBar (barra de app)       |
+    |  +------------------------------------+  |
+    |  |           Ejemplo Spacer           |  |
+    |  +------------------------------------+  |
+    |                                          |
+    |                Row                       |
+    |  +-----------------+ +------------------+|
+    |  |                 | |                 | |
+    |  |        Rojo     | |       Verde     | |
+    |  |                 | |                 | |
+    |  +-----------------+ +------------------+|
+    |                                          |
+    +------------------------------------------+
+
+
 
 ## DropdownButton
 Es un widget en Flutter que muestra un menú desplegable de opciones, permitiendo al usuario seleccionar una de las opciones disponibles. Es útil para casos en los que se necesita ofrecer múltiples opciones en un espacio reducido.
@@ -813,57 +936,6 @@ Es un widget en Flutter que se utiliza dentro de un widget Row, Column o Flex pa
     |                                          |
     +------------------------------------------+
 
-## Spacer
-Es un widget en Flutter que se utiliza dentro de un widget Row, Column, o Flex para crear espacio flexible entre los widgets hijos. A diferencia de Expanded, que expande el hijo para ocupar todo el espacio disponible, Spacer crea un espacio vacío flexible que puede ser utilizado para separar otros widgets de manera proporcional.
-
-    class MyApp extends StatelessWidget {
-      @override
-      Widget build(BuildContext context) {
-        return MaterialApp(
-          home: Scaffold(
-            appBar: AppBar(
-              title: Text('Ejemplo Spacer'),
-            ),
-            body: Row(
-              children: <Widget>[
-                Container(
-                  color: Colors.red,
-                  width: 100,
-                  height: 100,
-                  child: Center(
-                    child: Text('Rojo', style: TextStyle(color: Colors.white)),
-                  ),
-                ),
-                Spacer(),
-                Container(
-                  color: Colors.green,
-                  width: 100,
-                  height: 100,
-                  child: Center(
-                    child: Text('Verde', style: TextStyle(color: Colors.white)),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        );
-      }
-    }
-
-    +------------------------------------------+
-    |              AppBar (barra de app)       |
-    |  +------------------------------------+  |
-    |  |           Ejemplo Spacer           |  |
-    |  +------------------------------------+  |
-    |                                          |
-    |                Row                       |
-    |  +-----------------+ +------------------+|
-    |  |                 | |                 | |
-    |  |        Rojo     | |       Verde     | |
-    |  |                 | |                 | |
-    |  +-----------------+ +------------------+|
-    |                                          |
-    +------------------------------------------+
 
 ## GridView
 Es un widget en Flutter que muestra una cuadrícula de elementos desplazables. Es ideal para presentar una colección de elementos en una disposición de varias columnas y filas, similar a una cuadrícula de imágenes o ítems en una tienda.
@@ -924,3 +996,60 @@ Es un widget en Flutter que muestra una cuadrícula de elementos desplazables. E
     |   +--------+--------+--------+           |
     |                                          |
     +------------------------------------------+
+
+
+## Divider
+Es un widget en Flutter que se utiliza para dividir visualmente el contenido en una lista o en un contenedor. Generalmente se utiliza para separar elementos de una lista o para crear una línea de separación entre secciones de la interfaz de usuario.
+
+    class MyApp extends StatelessWidget {
+      @override
+      Widget build(BuildContext context) {
+        return MaterialApp(
+          home: Scaffold(
+            appBar: AppBar(
+              title: Text('Ejemplo Divider'),
+            ),
+            body: Column(
+              children: <Widget>[
+                ListTile(
+                  title: Text('Elemento 1'),
+                ),
+                Divider(), // Línea de separación
+                ListTile(
+                  title: Text('Elemento 2'),
+                ),
+                Divider(), // Línea de separación
+                ListTile(
+                  title: Text('Elemento 3'),
+                ),
+              ],
+            ),
+          ),
+        );
+      }
+    }
+
+    +------------------------------------------+
+    |              AppBar (barra de app)       |
+    |  +------------------------------------+  |
+    |  |           Ejemplo Divider          |  |
+    |  +------------------------------------+  |
+    |                                          |
+    |         +-------------------------+      |
+    |         |       Elemento 1        |      |
+    |         +-------------------------+      |
+    |         +-------------------------+      |
+    |         |          Divider        |      |
+    |         +-------------------------+      |
+    |         +-------------------------+      |
+    |         |       Elemento 2        |      |
+    |         +-------------------------+      |
+    |         +-------------------------+      |
+    |         |          Divider        |      |
+    |         +-------------------------+      |
+    |         +-------------------------+      |
+    |         |       Elemento 3        |      |
+    |         +-------------------------+      |
+    |                                          |
+    +------------------------------------------+
+
