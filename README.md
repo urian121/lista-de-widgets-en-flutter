@@ -1,20 +1,21 @@
-# Widgets en Flutter
+# Conociendo los Widgets en Flutter
 
 ### Los widgets de Flutter son los bloques de construcción fundamentales para crear interfaces de usuario interactivas y visualmente atractivas en las aplicaciones. En Flutter, todo es un widget.
 
-### Tipos de Widgets en Flutter
+#### Tipos de Widgets en Flutter
 Flutter ofrece una amplia gama de widgets, pero en su núcleo, estos se dividen en dos categorías principales: Stateless y Stateful.
 
-### WIDGETS STATELESS
+#### WIDGETS STATELESS
 Los widgets Stateless, como su nombre indica, son aquellos que no almacenan estado. Estos widgets son inmutables, lo que significa que sus propiedades no pueden cambiar durante su ciclo de vida. Se utiliza para mostrar texto en la aplicación y su contenido no cambia a menos que se reconstruya el widget con diferentes datos. 
 
-### WIDGETS STATEFUL
+#### WIDGETS STATEFUL
 A diferencia de los widgets Stateless, los widgets Stateful mantienen un estado que puede cambiar durante su ciclo de vida. Estos widgets son cruciales para partes de la interfaz de usuario que deben responder a eventos de usuario o cambios de datos. Un widget Stateful consta de dos clases: una para el widget en sí y otra para su estado.
 
 Un ejemplo clásico de un widget Stateful es un formulario con campos de entrada de texto, como TextField, donde el usuario puede introducir datos. Otro ejemplo sería un botón cuyo aspecto cambia cuando se presiona, como cambiar de color o tamaño.
 
-# Widget Scaffold
+#### Widget Scaffold
 El Scaffold es el armazón de tu aplicación Flutter. Proporciona la estructura básica para la mayoría de las aplicaciones móviles, incluyendo elementos como barras de navegación, cajones de navegación (drawers) y barras de estado. Esencialmente, es el lienzo en el que pintas tu interfaz de usuario.
+    
     @override
     Widget build(BuildContext context) {
         return Scaffold(
@@ -28,21 +29,22 @@ El Scaffold es el armazón de tu aplicación Flutter. Proporciona la estructura 
         );
     }
 
-+------------------------------------------+
-|        AppBar (barra de aplicación)      |
-|  +------------------------------------+  |
-|  |           Ejemplo Scaffold         |  |
-|  +------------------------------------+  |
-|                                          |
-|              Contenido Principal         |
-|              (Texto centrado)            |
-|                                          |
-|                                          |
-|                                          |
-+------------------------------------------+
+    +------------------------------------------+
+    |        AppBar (barra de aplicación)      |
+    |  +------------------------------------+  |
+    |  |           Ejemplo Scaffold         |  |
+    |  +------------------------------------+  |
+    |                                          |
+    |              Contenido Principal         |
+    |              (Texto centrado)            |
+    |                                          |
+    |                                          |
+    |                                          |
+    +------------------------------------------+
 
-### Widget ListView
+## Widget ListView
 ListView es el widget diseñado para mostrar una lista de elementos desplazables. Es ideal para situaciones donde necesitas mostrar una lista de datos, como una lista de correos electrónicos o contactos.
+
     ListView(
         children: <Widget>[
             ListTile(
@@ -55,6 +57,7 @@ ListView es el widget diseñado para mostrar una lista de elementos desplazables
             ),
         ],
     )
+
     +------------------------------------------+
     |            ListView (lista)              |
     |  +------------------------------------+  |
@@ -67,8 +70,7 @@ ListView es el widget diseñado para mostrar una lista de elementos desplazables
     |                                          |
     +------------------------------------------+
 
-### Widget Container
-
+## Widget Container
 El Container es quizás el widget más versátil en Flutter. Puede usarse para crear un rectángulo visual que puede ser decorado con BoxDecoration, como un borde, un fondo, etc. También se utiliza para agregar márgenes, relleno y restricciones a los elementos de la interfaz de usuario.
 
     Container(
@@ -95,8 +97,9 @@ El Container es quizás el widget más versátil en Flutter. Puede usarse para c
     |                                          |
     +------------------------------------------+
 
-### Widgets Column y Row
+## Widgets Column y Row
 Column y Row son widgets de diseño que permiten crear interfaces flexibles y reactivas. Column organiza los widgets verticalmente, mientras que Row los organiza horizontalmente.
+
     Column(
         children: <Widget>[
             Text('Primero'),
@@ -104,7 +107,9 @@ Column y Row son widgets de diseño que permiten crear interfaces flexibles y re
             Text('Tercero'),
         ],
     )
+
 ## Column
+
     +------------------------------------------+
     |              Column (vertical)           |
     |  +------------------------------------+  |
@@ -311,7 +316,8 @@ El widget de tipo Icon se encarga de la representación de un icono gráfico. En
     +------------------------------------------+
 
 
-## El widget FlatButton en Flutter es un botón sin elevación que se utiliza comúnmente para acciones simples. Aunque FlatButton ha sido reemplazado por TextButton en versiones más recientes de Flutter, la descripción y el código siguen siendo útiles para entender cómo funcionan los botones en Flutter.
+## FlatButton
+Es un botón sin elevación que se utiliza comúnmente para acciones simples. Aunque FlatButton ha sido reemplazado por TextButton en versiones más recientes de Flutter, la descripción y el código siguen siendo útiles para entender cómo funcionan los botones en Flutter.
 
     class MyApp extends StatelessWidget {
       @override
@@ -352,7 +358,8 @@ El widget de tipo Icon se encarga de la representación de un icono gráfico. En
     |                                          |
     +------------------------------------------+
 
-## El widget TextField en Flutter se utiliza para recibir texto del usuario. Es un campo de entrada de texto donde los usuarios pueden escribir datos. Puedes personalizar su apariencia y comportamiento según tus necesidades.
+## TextField
+Se utiliza para recibir texto del usuario. Es un campo de entrada de texto donde los usuarios pueden escribir datos. Puedes personalizar su apariencia y comportamiento según tus necesidades.
 
     class MyApp extends StatelessWidget {
       @override
@@ -397,7 +404,8 @@ El widget de tipo Icon se encarga de la representación de un icono gráfico. En
     +------------------------------------------+
 
 
-## El widget RaisedButton en Flutter se usaba para crear botones elevados con sombra, pero ha sido reemplazado por ElevatedButton en versiones más recientes de Flutter. Aquí te presento un ejemplo de RaisedButton y su equivalente moderno, junto con una representación visual.
+## RaisedButton
+Se usaba para crear botones elevados con sombra, pero ha sido reemplazado por ElevatedButton en versiones más recientes de Flutter. Aquí te presento un ejemplo de RaisedButton y su equivalente moderno, junto con una representación visual.
 
     class MyApp extends StatelessWidget {
       @override
@@ -440,7 +448,9 @@ El widget de tipo Icon se encarga de la representación de un icono gráfico. En
     |                                          |
     +------------------------------------------+
 
-## ElevatedButton es un widget en Flutter que crea un botón elevado con sombra, proporcionando un efecto visual de profundidad. Se utiliza para realizar acciones o desencadenar eventos cuando el usuario interactúa con él. Ideal para botones que necesitan destacarse en la interfaz de usuario.
+## ElevatedButton
+Es un widget en Flutter que crea un botón elevado con sombra, proporcionando un efecto visual de profundidad. Se utiliza para realizar acciones o desencadenar eventos cuando el usuario interactúa con él. Ideal para botones que necesitan destacarse en la interfaz de usuario.
+
     class MyApp extends StatelessWidget {
       @override
       Widget build(BuildContext context) {
