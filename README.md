@@ -1,4 +1,4 @@
-# <img width="48" height="48" src="https://upload.wikimedia.org/wikipedia/commons/4/44/Google-flutter-logo.svg](https://storage.googleapis.com/cms-storage-bucket/70760bf1e88b184bb1bc.png" alt="logo flutter"/> Lista de Widgets en Flutter 😲
+# <img width="48" height="48" src="[https://upload.wikimedia.org/wikipedia/commons/4/44/Google-flutter-logo.svg](https://storage.googleapis.com/cms-storage-bucket/70760bf1e88b184bb1bc.png](https://miro.medium.com/v2/resize:fit:720/format:webp/0*Y37daFMFwerE_zUr.jpg)" alt="logo flutter"/> Lista de Widgets en Flutter 😲
 
 ### Los widgets de Flutter son los bloques de construcción fundamentales para crear interfaces de usuario interactivas y visualmente atractivas en las aplicaciones. En Flutter, todo es un widget.
 
