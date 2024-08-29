@@ -877,6 +877,80 @@ Es un widget en Flutter que permite agregar espacio adicional alrededor de un wi
     |                                          |
     +------------------------------------------+
 
+## Flexible
+Se utiliza para adaptar el tamaño de sus hijos en un contenedor flexible, como una fila (Row) o una columna (Column). Te permite definir cómo debe expandirse o contraerse un hijo en relación con otros hijos dentro de un contenedor flexible.
+El primer Flexible tiene un flex de 2, lo que significa que ocupará el doble del espacio disponible en comparación con el segundo Flexible.
+El segundo Flexible tiene un flex de 1, así que ocupará la mitad del espacio en comparación con el primer Flexible.
+
+La suma de los flex se usa para dividir el espacio disponible entre los widgets Flexible, ajustándose dinámicamente según el tamaño total disponible en el contenedor.
+
+    import 'package:flutter/material.dart';
+
+    void main() {
+      runApp(MyApp());
+    }
+
+    class MyApp extends StatelessWidget {
+      @override
+      Widget build(BuildContext context) {
+        return MaterialApp(
+          home: Scaffold(
+            appBar: AppBar(
+              title: Text('Ejemplo de Flexible'),
+            ),
+            body: Column(
+              children: <Widget>[
+                Container(
+                  color: Colors.red,
+                  height: 100,
+                  child: Center(
+                    child: Text(
+                      'No Flexible',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ),
+                Flexible(
+                  flex: 2,
+                  child: Container(
+                    color: Colors.green,
+                    child: Center(
+                      child: Text(
+                        'Flexible 2',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                ),
+                Flexible(
+                  flex: 1,
+                  child: Container(
+                    color: Colors.blue,
+                    child: Center(
+                      child: Text(
+                        'Flexible 1',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  color: Colors.orange,
+                  height: 100,
+                  child: Center(
+                    child: Text(
+                      'No Flexible',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+      }
+    }
+
 
 ## Expanded
 Es un widget en Flutter que se utiliza dentro de un widget Row, Column o Flex para hacer que su hijo ocupe el espacio disponible en el eje principal. Esto es útil para crear interfaces flexibles y adaptativas, donde el tamaño de los widgets hijos se ajusta en función del espacio disponible.
@@ -1052,4 +1126,3 @@ Es un widget en Flutter que se utiliza para dividir visualmente el contenido en 
     |         +-------------------------+      |
     |                                          |
     +------------------------------------------+
-
