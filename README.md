@@ -9,6 +9,12 @@ Flutter ofrece una amplia gama de widgets, pero en su núcleo, estos se dividen 
 
 Flutter es un marco de código abierto creado por Google que permite una base de código único para crear interfaces de usuario complejas en múltiples dispositivos, independientemente de si se trata de un sistema operativo Android o iOS. La función Flutter-reload-hot-reload permite a los desarrolladores introducir cambios en tiempo casi real haciéndolo eficiente, y Googles Material Design permite a los desarrolladores modificar todos y cada uno de los píxeles en pantalla usando .widgets para crear diseños de IU consistentes para todas las plataformas durante el desarrollo multiplataforma. Los fans del desarrollo de aplicaciones móviles multiplataforma arrebatan a Flutter por su increíble rendimiento, arquitectura lógica y documentación exhaustiva. 
 
+#### ventajas
+Flutter reduce los costes de desarrollo hasta en un 40% y acelera el tiempo para comercializar con una base de código única para aplicaciones móviles, web y de escritorio.
+También reduce los costos de mantenimiento y simplifica las actualizaciones de la plataforma cruzada.
+Además, Flutter facilita la expansión a nuevas plataformas y llega a un público más amplio sin esfuerzo adicional.
+
+
 #### Qué es Dart?
 
 Dart es un lenguaje de programación de código abierto, orientado a objetos y multiplataforma creado por Google para el desarrollo de aplicaciones móviles, web y de escritorio sofisticadas de alto rendimiento. Tiene un gran conjunto de APIs, lo que hace que sea sencillo crear aplicaciones iOS y Android y las extensas bibliotecas permiten a los desarrolladores acceder a la base de datos y otros servicios externos con relativa facilidad. Las aplicaciones de Flutter están programadas usando Dart que puede compilarse tanto en AOT como en JIT (ver más abajo) y tiene una sintaxis bien definida, lo que facilita el desarrollo y mantenimiento de código. Todas estas cosas permiten a los desarrolladores crear aplicaciones el doble de rápido que las producidas usando otros marcos de desarrollo multiplataforma.
