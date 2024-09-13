@@ -10,6 +10,7 @@ Flutter ofrece una amplia gama de widgets, pero en su núcleo, estos se dividen 
 Flutter es un marco de código abierto creado por Google que permite una base de código único para crear interfaces de usuario complejas en múltiples dispositivos, independientemente de si se trata de un sistema operativo Android o iOS. La función Flutter-reload-hot-reload permite a los desarrolladores introducir cambios en tiempo casi real haciéndolo eficiente, y Googles Material Design permite a los desarrolladores modificar todos y cada uno de los píxeles en pantalla usando .widgets para crear diseños de IU consistentes para todas las plataformas durante el desarrollo multiplataforma. Los fans del desarrollo de aplicaciones móviles multiplataforma arrebatan a Flutter por su increíble rendimiento, arquitectura lógica y documentación exhaustiva. 
 
 #### ventajas
+
 Flutter reduce los costes de desarrollo hasta en un 40% y acelera el tiempo para comercializar con una base de código única para aplicaciones móviles, web y de escritorio.
 También reduce los costos de mantenimiento y simplifica las actualizaciones de la plataforma cruzada.
 Además, Flutter facilita la expansión a nuevas plataformas y llega a un público más amplio sin esfuerzo adicional.
@@ -19,6 +20,15 @@ Además, Flutter facilita la expansión a nuevas plataformas y llega a un públi
 
 Dart es un lenguaje de programación de código abierto, orientado a objetos y multiplataforma creado por Google para el desarrollo de aplicaciones móviles, web y de escritorio sofisticadas de alto rendimiento. Tiene un gran conjunto de APIs, lo que hace que sea sencillo crear aplicaciones iOS y Android y las extensas bibliotecas permiten a los desarrolladores acceder a la base de datos y otros servicios externos con relativa facilidad. Las aplicaciones de Flutter están programadas usando Dart que puede compilarse tanto en AOT como en JIT (ver más abajo) y tiene una sintaxis bien definida, lo que facilita el desarrollo y mantenimiento de código. Todas estas cosas permiten a los desarrolladores crear aplicaciones el doble de rápido que las producidas usando otros marcos de desarrollo multiplataforma.
 
+
+#### Qué es Flutter?
+
+Flutter es un marco de código abierto, multiplataforma utilizado para el desarrollo de aplicaciones móviles, basado en interfaces nativas de iOS y Android. Fue presentado en 2018 y se exhibió en una de las conferencias de Google para desarrolladores. Las principales razones por las que Flutter se ha vuelto tan popular entre los desarrolladores son:
+
+Lengua de Dar, un lenguaje de programación moderno, conciso y orientado. Dart se basa en el estilo/sintaxis de C, que se puede compilar en JavaScript;
+Función de descarga caliente, gracias a ella, el proceso de desarrollo de la aplicación es más rápido porque los programadores tienen la posibilidad de previsualizar cambios en el código sobre la marcha sin tener que recompilar la aplicación. Esto permite la fijación de errores más rápido, pruebas y la verificación de varios elementos de código, interfaces de usuario;
+
+    
 
 #### WIDGETS STATELESS
 Los widgets Stateless, como su nombre indica, son aquellos que no almacenan estado. Estos widgets son inmutables, lo que significa que sus propiedades no pueden cambiar durante su ciclo de vida. Se utiliza para mostrar texto en la aplicación y su contenido no cambia a menos que se reconstruya el widget con diferentes datos. 
