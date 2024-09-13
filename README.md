@@ -1,9 +1,18 @@
 # <img width="48" height="48" src="https://miro.medium.com/v2/resize:fit:720/format:webp/0*Y37daFMFwerE_zUr.jpg" alt="logo flutter"/> Lista de Widgets en Flutter 😲
 
-### Los widgets de Flutter son los bloques de construcción fundamentales para crear interfaces de usuario interactivas y visualmente atractivas en las aplicaciones. En Flutter, todo es un widget.
+#### Los widgets de Flutter son los bloques de construcción fundamentales para crear interfaces de usuario interactivas y visualmente atractivas en las aplicaciones. En Flutter, todo es un widget.
 
 #### Tipos de Widgets en Flutter
 Flutter ofrece una amplia gama de widgets, pero en su núcleo, estos se dividen en dos categorías principales: Stateless y Stateful.
+
+#### Qué es Flutter?
+
+Flutter es un marco de código abierto creado por Google que permite una base de código único para crear interfaces de usuario complejas en múltiples dispositivos, independientemente de si se trata de un sistema operativo Android o iOS. La función Flutter-reload-hot-reload permite a los desarrolladores introducir cambios en tiempo casi real haciéndolo eficiente, y Googles Material Design permite a los desarrolladores modificar todos y cada uno de los píxeles en pantalla usando .widgets para crear diseños de IU consistentes para todas las plataformas durante el desarrollo multiplataforma. Los fans del desarrollo de aplicaciones móviles multiplataforma arrebatan a Flutter por su increíble rendimiento, arquitectura lógica y documentación exhaustiva. 
+
+#### Qué es Dart?
+
+Dart es un lenguaje de programación de código abierto, orientado a objetos y multiplataforma creado por Google para el desarrollo de aplicaciones móviles, web y de escritorio sofisticadas de alto rendimiento. Tiene un gran conjunto de APIs, lo que hace que sea sencillo crear aplicaciones iOS y Android y las extensas bibliotecas permiten a los desarrolladores acceder a la base de datos y otros servicios externos con relativa facilidad. Las aplicaciones de Flutter están programadas usando Dart que puede compilarse tanto en AOT como en JIT (ver más abajo) y tiene una sintaxis bien definida, lo que facilita el desarrollo y mantenimiento de código. Todas estas cosas permiten a los desarrolladores crear aplicaciones el doble de rápido que las producidas usando otros marcos de desarrollo multiplataforma.
+
 
 #### WIDGETS STATELESS
 Los widgets Stateless, como su nombre indica, son aquellos que no almacenan estado. Estos widgets son inmutables, lo que significa que sus propiedades no pueden cambiar durante su ciclo de vida. Se utiliza para mostrar texto en la aplicación y su contenido no cambia a menos que se reconstruya el widget con diferentes datos. 
