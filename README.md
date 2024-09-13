@@ -28,7 +28,13 @@ Flutter es un marco de código abierto, multiplataforma utilizado para el desarr
 Lengua de Dar, un lenguaje de programación moderno, conciso y orientado. Dart se basa en el estilo/sintaxis de C, que se puede compilar en JavaScript;
 Función de descarga caliente, gracias a ella, el proceso de desarrollo de la aplicación es más rápido porque los programadores tienen la posibilidad de previsualizar cambios en el código sobre la marcha sin tener que recompilar la aplicación. Esto permite la fijación de errores más rápido, pruebas y la verificación de varios elementos de código, interfaces de usuario;
 
-    
+#### ListView Separated widget
+
+En Flutter, el widget de ListView Separated se utiliza para mostrar una lista de artículos de desplazamiento, donde cada elemento está separado por un widget de divider especificado. Este widget es particularmente útil cuando desea mostrar una lista con separación visual entre sus elementos, como líneas o separadores personalizados.
+
+ListView Separated es similar al widget regular ListView, pero inserta automáticamente divisores entre sus hijos. Esto lo hace conveniente para mostrar listas de datos con separadores consistentes sin tener que gestionar manualmente el espaciado entre elementos.
+
+
 
 #### WIDGETS STATELESS
 Los widgets Stateless, como su nombre indica, son aquellos que no almacenan estado. Estos widgets son inmutables, lo que significa que sus propiedades no pueden cambiar durante su ciclo de vida. Se utiliza para mostrar texto en la aplicación y su contenido no cambia a menos que se reconstruya el widget con diferentes datos. 
