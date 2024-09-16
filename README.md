@@ -101,6 +101,83 @@ ListView es el widget diseñado para mostrar una lista de elementos desplazables
     |                                          |
     +------------------------------------------+
 
+## ListView.builder es un widget en Flutter que se utiliza para crear listas de manera eficiente cuando los elementos de la lista son generados dinámicamente o cuando la lista tiene muchos elementos. En lugar de crear todos los widgets de la lista de una vez (lo que podría consumir mucha memoria), ListView.builder solo crea los widgets visibles en la pantalla y genera los otros bajo demanda, lo que mejora el rendimiento.
+Propósito de ListView.builder
+
+- Es útil cuando tienes una lista larga o infinita de elementos y quieres cargarlos bajo demanda.
+- Acepta un índice que se puede usar para construir cada elemento de la lista dinámicamente.
+
+Sintaxis
+ListView.builder(
+  itemCount: <número de elementos>,
+  itemBuilder: (BuildContext context, int index) {
+    return <widget para cada elemento>;
+  },
+);
+
+#### Ejemplo prectico
+    import 'package:flutter/material.dart';
+    
+    void main() {
+      runApp(const MyApp());
+    }
+    
+    class MyApp extends StatelessWidget {
+      const MyApp({super.key});
+    
+      @override
+      Widget build(BuildContext context) {
+        return MaterialApp(
+          home: Scaffold(
+            appBar: AppBar(
+              title: const Text('Ejemplo de ListView.builder'),
+            ),
+            body: MiLista(),
+          ),
+        );
+      }
+    }
+    
+    class MiLista extends StatelessWidget {
+      final List<String> nombres = [
+        'Carlos',
+        'Ana',
+        'Luis',
+        'María',
+        'Pedro',
+        'Sofía',
+        'Fernando',
+        'Javier',
+        'Luisa',
+        'Carlos',
+        'Alejandro',
+        'Sara',
+        'Díana',
+        'Carmen',
+        'Brenda',
+        'Lucía',
+        'Carolina',
+        'Estela',
+        'Cristina',
+        'Carmen',
+      ];
+    
+      MiLista({super.key});
+    
+      @override
+      Widget build(BuildContext context) {
+        return ListView.builder(
+          itemCount: nombres.length, // Número de elementos
+          itemBuilder: (BuildContext context, int index) {
+            return ListTile(
+              title: Text(nombres[index]), // Muestra el nombre según el índice
+            );
+          },
+        );
+      }
+    }
+
+    
 ## Widget Container
 El Container es quizás el widget más versátil en Flutter. Puede usarse para crear un rectángulo visual que puede ser decorado con BoxDecoration, como un borde, un fondo, etc. También se utiliza para agregar márgenes, relleno y restricciones a los elementos de la interfaz de usuario.
 
