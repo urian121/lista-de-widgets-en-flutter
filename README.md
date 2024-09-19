@@ -1338,3 +1338,31 @@ Es un widget en Flutter que se utiliza para dividir visualmente el contenido en 
     |         +-------------------------+      |
     |                                          |
     +------------------------------------------+
+
+
+## Widget GestureDetector
+GestureDetector es un widget en Flutter que detecta gestos del usuario, como toques, deslizamientos o pulsaciones largas. Funciona capturando gestos definidos (como onTap, onDoubleTap, etc.) y ejecutando una acción. Es útil para hacer interactivos los widgets, permitiendo responder a eventos táctiles en la interfaz.
+
+    GestureDetector(
+      onTap: () { // Función que se ejecuta al tocar el widget.
+        print('Contenedor tocado!');
+      },
+      onDoubleTap: () { // Función que se ejecuta al hacer doble tap.
+        print('Doble tap en el contenedor!');
+      },
+      onLongPress: () { // Función que se ejecuta al mantener presionado.
+        print('Presionado por largo tiempo!');
+      },
+      child: Container(
+        width: 200,
+        height: 200,
+        color: Colors.blue, // Contenedor azul.
+        child: Center(
+          child: Text(
+            'Toca aquí', 
+            style: TextStyle(color: Colors.white, fontSize: 18),
+          ),
+        ),
+      ),
+    )
+
