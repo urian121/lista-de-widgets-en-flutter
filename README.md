@@ -1366,3 +1366,26 @@ GestureDetector es un widget en Flutter que detecta gestos del usuario, como toq
       ),
     )
 
+## InkResponse 
+Es un widget en Flutter que detecta gestos y proporciona una retroalimentación visual, como un efecto de onda (ripple) al ser tocado. Funciona como un detector de gestos, similar a GestureDetector, pero con animaciones visuales integradas. Es útil para crear botones interactivos con efectos táctiles. Además, permite personalizar la respuesta visual al interactuar.
+    
+     InkResponse(
+      onTap: () { // Función que se ejecuta al tocar el widget.
+        print('InkResponse tocado!');
+      },
+      onLongPress: () { // Función que se ejecuta al mantener presionado.
+        print('Mantener presionado!');
+      },
+      radius: 50.0, // Radio del área donde se muestra el efecto ripple.
+      child: Container(
+        width: 150,
+        height: 150,
+        color: Colors.blue, // Contenedor azul.
+        child: Center(
+          child: Text(
+            'Toca aquí', 
+            style: TextStyle(color: Colors.white, fontSize: 18),
+          ),
+        ),
+      ),
+    )
