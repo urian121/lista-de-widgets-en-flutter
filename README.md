@@ -717,6 +717,132 @@ Es un widget en Flutter que crea un botón elevado con sombra, proporcionando un
     |                                          |
     +------------------------------------------+
 
+## Widget SliverList
+Este widget se utiliza para crear una lista de elementos que se pueden desplazar dentro de un CustomScrollView. Funciona bien para listas grandes con rendimiento optimizado.
+
+#### Explicación:
+
+    CustomScrollView: Es un contenedor de scroll personalizado que permite combinar diferentes tipos de slivers.
+    SliverAppBar: Un encabezado que se desplaza junto con la lista.
+    SliverList: Un widget que muestra una lista de elementos que se generan dinámicamente con SliverChildBuilderDelegate.
+    SliverChildBuilderDelegate: Se utiliza para construir cada elemento de la lista a medida que se desplaza.
+
+    import 'package:flutter/material.dart';
+    
+    void main() {
+      runApp(MyApp());
+    }
+    
+    class MyApp extends StatelessWidget {
+      @override
+      Widget build(BuildContext context) {
+        return MaterialApp(
+          home: Scaffold(
+            appBar: AppBar(
+              title: Text('Ejemplo de SliverList'),
+            ),
+            body: CustomScrollView(
+              slivers: [
+                SliverAppBar(
+                  pinned: true,
+                  expandedHeight: 200.0,
+                  flexibleSpace: FlexibleSpaceBar(
+                    title: Text('SliverList Demo'),
+                    background: Image.network(
+                      'https://placekitten.com/800/400',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                SliverList(
+                  delegate: SliverChildBuilderDelegate(
+                    (BuildContext context, int index) {
+                      return Container(
+                        padding: EdgeInsets.all(16.0),
+                        margin: EdgeInsets.symmetric(vertical: 4.0),
+                        color: Colors.blue[100 * (index % 9)],
+                        child: Text(
+                          'Elemento $index',
+                          style: TextStyle(fontSize: 20),
+                        ),
+                      );
+                    },
+                    childCount: 20, // Número de elementos en la lista
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+      }
+    }
+
+## Widget SliverAppBar 
+El SliverAppBar es un widget en Flutter que crea una barra de aplicaciones expansible y colapsable con el scroll. Sirve para mejorar la interfaz visual en pantallas con mucho contenido desplazable.
+Se usa cuando necesitas una barra dinámica que cambie su tamaño o comportamiento al desplazarse. Ideal para apps con contenido largo, como tiendas o galerías.
+
+#### SliverAppBar: Es un AppBar flexible que puede expandirse y colapsarse mientras el usuario hace scroll. Los atributos importantes son:
+
+    pinned: Si es true, la barra de aplicaciones permanece fija en la parte superior cuando se colapsa.
+    expandedHeight: La altura máxima que tendrá el AppBar cuando esté expandido.
+    FlexibleSpaceBar: Un widget flexible dentro del AppBar que puede incluir un título y una imagen de fondo.
+
+#### SliverList: Después del SliverAppBar, tenemos una lista que se desplaza, generando 20 elementos dinámicamente.
+
+    import 'package:flutter/material.dart';
+    
+    void main() {
+      runApp(MyApp());
+    }
+    
+    class MyApp extends StatelessWidget {
+      @override
+      Widget build(BuildContext context) {
+        return MaterialApp(
+          home: MyHomePage(),
+        );
+      }
+    }
+    
+    class MyHomePage extends StatelessWidget {
+      @override
+      Widget build(BuildContext context) {
+        return Scaffold(
+          body: CustomScrollView(
+            slivers: [
+              SliverAppBar(
+                pinned: true, // Mantiene el AppBar en la parte superior
+                expandedHeight: 200.0, // Altura cuando está expandido
+                flexibleSpace: FlexibleSpaceBar(
+                  title: Text('SliverAppBar Demo'),
+                  background: Image.network(
+                    'https://placekitten.com/800/400', // Imagen de fondo
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              SliverList(
+                delegate: SliverChildBuilderDelegate(
+                  (BuildContext context, int index) {
+                    return Container(
+                      padding: EdgeInsets.all(16.0),
+                      margin: EdgeInsets.symmetric(vertical: 4.0),
+                      color: Colors.green[100 * (index % 9)],
+                      child: Text(
+                        'Elemento $index',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    );
+                  },
+                  childCount: 20, // Número de elementos en la lista
+                ),
+              ),
+            ],
+          ),
+        );
+      }
+    }
+
 
 ## Card
 Es un widget en Flutter que proporciona una interfaz visual de contenedor con bordes redondeados y sombra, ideal para mostrar contenido agrupado, como información de un producto, una tarjeta de perfil, o cualquier otro conjunto de datos relacionado.
