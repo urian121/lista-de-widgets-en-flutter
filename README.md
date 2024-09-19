@@ -1886,3 +1886,83 @@ Es un widget en Flutter que detecta gestos y proporciona una retroalimentación 
         ),
       ),
     )
+
+
+## Navegar entre páginas en Flutte
+
+#### 1. Crear dos pantallas
+Primero, define dos pantallas (widgets) entre las que quieras navegar.
+FirstPage.dart
+    
+    import 'package:flutter/material.dart';
+    
+    class FirstPage extends StatelessWidget {
+      @override
+      Widget build(BuildContext context) {
+        return Scaffold(
+          appBar: AppBar(
+            title: Text('Primera Página'),
+          ),
+          body: Center(
+            child: ElevatedButton(
+              onPressed: () {
+                // Navegar a la segunda página
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SecondPage()),
+                );
+              },
+              child: Text('Ir a la Segunda Página'),
+            ),
+          ),
+        );
+      }
+    }
+
+#### Archivo SecondPage.dart
+    
+    import 'package:flutter/material.dart';
+    
+    class SecondPage extends StatelessWidget {
+      @override
+      Widget build(BuildContext context) {
+        return Scaffold(
+          appBar: AppBar(
+            title: Text('Segunda Página'),
+          ),
+          body: Center(
+            child: ElevatedButton(
+              onPressed: () {
+                // Volver a la primera página
+                Navigator.pop(context);
+              },
+              child: Text('Volver a la Primera Página'),
+            ),
+          ),
+        );
+      }
+    }
+
+## Configurar la navegación en tu main.dart
+
+    import 'package:flutter/material.dart';
+    import 'FirstPage.dart'; // Asegúrate de importar tu archivo
+    
+    void main() {
+      runApp(MyApp());
+    }
+    
+    class MyApp extends StatelessWidget {
+      @override
+      Widget build(BuildContext context) {
+        return MaterialApp(
+          title: 'Flutter Navigation Example',
+          theme: ThemeData(
+            primarySwatch: Colors.blue,
+          ),
+          home: FirstPage(),
+        );
+      }
+    }
+
+
