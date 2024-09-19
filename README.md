@@ -44,11 +44,11 @@ A diferencia de los widgets Stateless, los widgets Stateful mantienen un estado 
 
 Un ejemplo clásico de un widget Stateful es un formulario con campos de entrada de texto, como TextField, donde el usuario puede introducir datos. Otro ejemplo sería un botón cuyo aspecto cambia cuando se presiona, como cambiar de color o tamaño.
 
-### MaterialApp: Utilizado para aplicaciones que siguen las directrices de diseño Material de Google.
-### CupertinoApp: Utilizado para aplicaciones con estilo iOS, siguiendo las directrices de diseño de Cupertino.
+#### MaterialApp: Utilizado para aplicaciones que siguen las directrices de diseño Material de Google.
+#### CupertinoApp: Utilizado para aplicaciones con estilo iOS, siguiendo las directrices de diseño de Cupertino.
 
 
-### ¿Qué es TextStyle?
+#### ¿Qué es TextStyle?
 TextStyle es una clase en Flutter que permite personalizar la apariencia del texto, incluyendo propiedades como el tamaño de fuente, el color, el grosor, el estilo (negrita, cursiva), y otros atributos de estilo.
 
     Text(
@@ -60,7 +60,7 @@ TextStyle es una clase en Flutter que permite personalizar la apariencia del tex
       ),
     )
 
-### ¿Qué es Icons?
+#### ¿Qué es Icons?
 Icons es una clase en Flutter que contiene una serie de íconos de Material Design listos para usar. Proporciona acceso a un conjunto de íconos que puedes utilizar en tu aplicación.
 
     Icon(
@@ -69,7 +69,24 @@ Icons es una clase en Flutter que contiene una serie de íconos de Material Desi
       size: 30,
     )
 
+#### Comando:
+- Este comando descarga e instala todas las dependencias especificadas en el archivo pubspec.yaml del proyecto.
+      flutter pub get
+  
+- Este comando compila la aplicación Flutter en un archivo APK para distribución en modo release, optimizado para rendimiento.
+    flutter build apk --release
 
+- Este comando elimina los archivos generados automáticamente y las carpetas de caché, ayudando a resolver problemas de compilación y a limpiar el proyecto.
+    flutter clean
+
+- Este comando compila y ejecuta la aplicación Flutter en un emulador o dispositivo conectado, iniciando la depuración en modo de desarrollo.
+    flutter run
+
+- Este comando añade el paquete 'shared_preferences' a las dependencias del proyecto y lo incluye en el archivo pubspec.yaml.
+    flutter pub add nombre-del-paquete
+
+
+    
 #### Widget Scaffold
 El Scaffold es el armazón de tu aplicación Flutter. Proporciona la estructura básica para la mayoría de las aplicaciones móviles, incluyendo elementos como barras de navegación, cajones de navegación (drawers) y barras de estado. Esencialmente, es el lienzo en el que pintas tu interfaz de usuario.
     
