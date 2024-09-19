@@ -388,6 +388,25 @@ El widget Text ayuda a mostrar una línea o varias con un estilo determinado. Es
     +------------------------------------------+
 
 
+## Align
+
+El widget Align en Flutter alinea su widget hijo dentro de su contenedor padre según una posición especificada. Funciona utilizando la propiedad alignment, que acepta valores predefinidos como Alignment.center, Alignment.topLeft, entre otros, o coordenadas personalizadas. Es útil para ajustar la posición de un widget dentro de un espacio más grande, dándole control sobre la ubicación exacta del contenido dentro de su padre.
+
+    Align(
+      alignment: Alignment.bottomRight, // Alinea el contenido en la esquina inferior derecha.
+      child: Container(
+        width: 100,
+        height: 100,
+        color: Colors.blue, // Contenedor azul de 100x100 píxeles.
+        child: Text(
+          'Alineado', 
+          style: TextStyle(color: Colors.white), // Texto dentro del contenedor.
+          textAlign: TextAlign.center, // Centra el texto dentro del contenedor.
+        ),
+      ),
+    )
+
+
 ## Image
 Si hablamos de los widgets básicos de Flutter no podemos dejar de lado la clase Image, que es la que hace posible que podamos mostrar una imagen. Principalmente, admite los siguientes formatos de imagen: JPEG, PNG, GIF, GIF animado, WebP, WebP animado, BMP y WBMP.
 
