@@ -1284,6 +1284,51 @@ Es un widget en Flutter que muestra una cuadrícula de elementos desplazables. E
     +------------------------------------------+
 
 
+## Widget GridView.builder
+GridView.builder es un widget en Flutter que crea una cuadrícula de elementos de manera perezosa, generando solo los elementos visibles en pantalla. Funciona usando un itemBuilder para construir cada celda bajo demanda. Es útil para mostrar colecciones grandes o dinámicas en una cuadrícula eficiente en cuanto a memoria.
+
+GridView.builder crea una cuadrícula de elementos que se generan de forma perezosa (solo los visibles son construidos).
+SliverGridDelegateWithFixedCrossAxisCount define el diseño de la cuadrícula con un número fijo de columnas (crossAxisCount).
+itemCount especifica el número total de elementos en la cuadrícula.
+itemBuilder construye cada elemento de la cuadrícula con un color y texto dinámico.
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text('GridView.builder Example')),
+        body: GridView.builder(
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3, // Número de columnas en el grid.
+            crossAxisSpacing: 10.0, // Espacio horizontal entre los elementos.
+            mainAxisSpacing: 10.0, // Espacio vertical entre los elementos.
+          ),
+          itemCount: 30, // Número total de elementos en el grid.
+          itemBuilder: (context, index) {
+            return Container(
+              color: Colors.teal[(index % 9 + 1) * 100], // Color dinámico para cada elemento.
+              child: Center(
+                child: Text(
+                  'Item $index',
+                  style: TextStyle(color: Colors.white, fontSize: 18),
+                ),
+              ),
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+
+
 ## Divider
 Es un widget en Flutter que se utiliza para dividir visualmente el contenido en una lista o en un contenedor. Generalmente se utiliza para separar elementos de una lista o para crear una línea de separación entre secciones de la interfaz de usuario.
 
