@@ -1291,42 +1291,119 @@ GridView.builder crea una cuadrícula de elementos que se generan de forma perez
 SliverGridDelegateWithFixedCrossAxisCount define el diseño de la cuadrícula con un número fijo de columnas (crossAxisCount).
 itemCount especifica el número total de elementos en la cuadrícula.
 itemBuilder construye cada elemento de la cuadrícula con un color y texto dinámico.
-
-import 'package:flutter/material.dart';
-
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: Text('GridView.builder Example')),
-        body: GridView.builder(
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3, // Número de columnas en el grid.
-            crossAxisSpacing: 10.0, // Espacio horizontal entre los elementos.
-            mainAxisSpacing: 10.0, // Espacio vertical entre los elementos.
-          ),
-          itemCount: 30, // Número total de elementos en el grid.
-          itemBuilder: (context, index) {
-            return Container(
-              color: Colors.teal[(index % 9 + 1) * 100], // Color dinámico para cada elemento.
-              child: Center(
-                child: Text(
-                  'Item $index',
-                  style: TextStyle(color: Colors.white, fontSize: 18),
-                ),
+    
+    import 'package:flutter/material.dart';
+    
+    void main() {
+      runApp(MyApp());
+    }
+    
+    class MyApp extends StatelessWidget {
+      @override
+      Widget build(BuildContext context) {
+        return MaterialApp(
+          home: Scaffold(
+            appBar: AppBar(title: Text('GridView.builder Example')),
+            body: GridView.builder(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 3, // Número de columnas en el grid.
+                crossAxisSpacing: 10.0, // Espacio horizontal entre los elementos.
+                mainAxisSpacing: 10.0, // Espacio vertical entre los elementos.
               ),
-            );
-          },
-        ),
-      ),
-    );
-  }
-}
+              itemCount: 30, // Número total de elementos en el grid.
+              itemBuilder: (context, index) {
+                return Container(
+                  color: Colors.teal[(index % 9 + 1) * 100], // Color dinámico para cada elemento.
+                  child: Center(
+                    child: Text(
+                      'Item $index',
+                      style: TextStyle(color: Colors.white, fontSize: 18),
+                    ),
+                  ),
+                );
+              },
+            ),
+          ),
+        );
+      }
+    }
+
+## Diferencia entre GridView.builder vs ListView.builder
+
+    GridView.builder: Organiza los elementos en una cuadrícula (grid) con múltiples columnas y filas.
+    ListView.builder: Organiza los elementos en una lista vertical (o horizontal) con una sola columna.
+
+Uso:
+
+    Usa GridView.builder cuando necesites una disposición en cuadrícula, como en galerías de imágenes o catálogos de productos.
+    Usa ListView.builder para listas verticales o horizontales, como listas de correos electrónicos o elementos de menú.
+
+### Diferencia GridView.builder
+    import 'package:flutter/material.dart';
+    
+    void main() {
+      runApp(MyApp());
+    }
+    
+    class MyApp extends StatelessWidget {
+      @override
+      Widget build(BuildContext context) {
+        return MaterialApp(
+          home: Scaffold(
+            appBar: AppBar(title: Text('GridView.builder Example')),
+            body: GridView.builder(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 3,
+                crossAxisSpacing: 10.0,
+                mainAxisSpacing: 10.0,
+              ),
+              itemCount: 30,
+              itemBuilder: (context, index) {
+                return Container(
+                  color: Colors.teal[(index % 9 + 1) * 100],
+                  child: Center(
+                    child: Text(
+                      'Grid $index',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                );
+              },
+            ),
+          ),
+        );
+      }
+    }
+
+### Diferencia ListView.builder
+    
+    import 'package:flutter/material.dart';
+    
+    void main() {
+      runApp(MyApp());
+    }
+    
+    class MyApp extends StatelessWidget {
+      @override
+      Widget build(BuildContext context) {
+        return MaterialApp(
+          home: Scaffold(
+            appBar: AppBar(title: Text('ListView.builder Example')),
+            body: ListView.builder(
+              itemCount: 30,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  leading: Icon(Icons.star),
+                  title: Text('Item $index'),
+                  subtitle: Text('Subtitle $index'),
+                );
+              },
+            ),
+          ),
+        );
+      }
+    }
+
 
 
 ## Divider
