@@ -216,7 +216,49 @@ Column y Row son widgets de diseño que permiten crear interfaces flexibles y re
         ],
     )
 
-## Column
+## Widget Column
+El widget Column en Flutter organiza sus hijos en una disposición vertical. Funciona alineando widgets uno debajo del otro, permitiendo personalizar su alineación y distribución a lo largo del eje vertical. Es útil para crear interfaces que requieren componentes apilados verticalmente. Además, admite personalización de espaciamiento, alineación y expansión dentro de su contenedor.
+
+```
+  Column(
+    mainAxisAlignment: MainAxisAlignment.center, // Alinea los elementos en el centro verticalmente.
+    crossAxisAlignment: CrossAxisAlignment.stretch, // Estira los elementos horizontalmente para que ocupen todo el ancho.
+    children: <Widget>[
+      Container(
+        margin: EdgeInsets.all(8.0), // Añade margen alrededor del contenedor.
+        padding: EdgeInsets.all(16.0), // Añade espacio dentro del contenedor.
+        color: Colors.blueAccent, // Color de fondo del contenedor.
+        child: Text(
+          'Primero', 
+          style: TextStyle(color: Colors.white), // Color del texto dentro del contenedor.
+          textAlign: TextAlign.center, // Centra el texto.
+        ),
+      ),
+      Container(
+        margin: EdgeInsets.all(8.0),
+        padding: EdgeInsets.all(16.0),
+        color: Colors.greenAccent,
+        child: Text(
+          'Segundo', 
+          style: TextStyle(color: Colors.white),
+          textAlign: TextAlign.center,
+        ),
+      ),
+      Container(
+        margin: EdgeInsets.all(8.0),
+        padding: EdgeInsets.all(16.0),
+        color: Colors.redAccent,
+        child: Text(
+          'Tercero', 
+          style: TextStyle(color: Colors.white),
+          textAlign: TextAlign.center,
+        ),
+      ),
+    ],
+  )
+```
+
+
 
     +------------------------------------------+
     |              Column (vertical)           |
