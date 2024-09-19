@@ -68,19 +68,6 @@ Icons es una clase en Flutter que contiene una serie de íconos de Material Desi
       color: Colors.blue,
       size: 30,
     )
-    
-## IconButton 
-Es un widget en Flutter que combina un ícono con una acción interactiva. Es útil para crear botones en la interfaz de usuario que responden a los toques o clics del usuario.
-IconButton es un widget que muestra un ícono y permite al usuario interactuar con él, generalmente ejecutando una acción cuando se toca o se hace clic en el ícono.
-
-    IconButton(
-      icon: Icon(Icons.favorite, color: Colors.red),
-      onPressed: () {
-        // Acción a realizar cuando se toca el botón.
-        print('Ícono de favorito tocado');
-      },
-    )
-
 
 
 #### Widget Scaffold
@@ -568,6 +555,134 @@ Es un botón sin elevación que se utiliza comúnmente para acciones simples. Au
     |       +--------------------------+       |
     |                                          |
     +------------------------------------------+
+
+## IconButton 
+Es un widget en Flutter que combina un ícono con una acción interactiva. Es útil para crear botones en la interfaz de usuario que responden a los toques o clics del usuario.
+IconButton es un widget que muestra un ícono y permite al usuario interactuar con él, generalmente ejecutando una acción cuando se toca o se hace clic en el ícono.
+
+    IconButton(
+      icon: Icon(Icons.favorite, color: Colors.red),
+      onPressed: () {
+        // Acción a realizar cuando se toca el botón.
+        print('Ícono de favorito tocado');
+      },
+    )
+
+
+## NavigationBar
+Es un widget en Flutter que proporciona una barra de navegación en la parte inferior de la pantalla, permitiendo a los usuarios navegar entre diferentes secciones de una aplicación. Es similar al BottomNavigationBar, pero ofrece una apariencia y funcionalidad más moderna.
+
+```
+  NavigationBar(
+    destinations: [
+      NavigationDestination(
+        icon: Icon(Icons.home),
+        label: 'Inicio',
+      ),
+      NavigationDestination(
+        icon: Icon(Icons.search),
+        label: 'Buscar',
+      ),
+      NavigationDestination(
+        icon: Icon(Icons.notifications),
+        label: 'Notificaciones',
+      ),
+      NavigationDestination(
+        icon: Icon(Icons.account_circle),
+        label: 'Perfil',
+      ),
+    ],
+    onDestinationSelected: (int index) {
+      // Acción a realizar al seleccionar un destino.
+    },
+  )
+
+```
+## Slider
+Es un widget en Flutter que permite a los usuarios seleccionar un valor de un rango continuo moviendo un control deslizante. Es útil para ajustes que requieren un rango de valores, como volúmenes, brillo, o cualquier configuración numérica
+
+    Slider(
+      value: _currentValue, // Valor actual del slider.
+      min: 0.0, // Valor mínimo.
+      max: 100.0, // Valor máximo.
+      divisions: 10, // Número de divisiones en el slider.
+      label: _currentValue.round().toString(), // Etiqueta que muestra el valor actual.
+      onChanged: (double value) {
+        setState(() {
+          _currentValue = value; // Actualiza el valor del slider.
+        });
+      },
+    )
+
+## SimpleDialog
+Es un widget en Flutter que muestra un cuadro de diálogo sencillo con una lista de opciones o un mensaje. Es útil para presentar una selección de opciones o mostrar información sin necesidad de una interacción compleja.
+
+```
+void _showDialog(BuildContext context) {
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return SimpleDialog(
+        title: Text('Selecciona una opción'),
+        children: <Widget>[
+          SimpleDialogOption(
+            onPressed: () {
+              Navigator.pop(context, 'Opción 1');
+            },
+            child: Text('Opción 1'),
+          ),
+          SimpleDialogOption(
+            onPressed: () {
+              Navigator.pop(context, 'Opción 2');
+            },
+            child: Text('Opción 2'),
+          ),
+        ],
+      );
+    },
+  );
+}
+
+```
+
+## BottomSheet
+Es un widget en Flutter que muestra una hoja deslizante desde la parte inferior de la pantalla. Se usa para presentar opciones adicionales, acciones o información de manera que el usuario pueda interactuar sin cambiar de pantalla.
+
+```
+  void _showBottomSheet(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return Container(
+          padding: EdgeInsets.all(16),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Text('Opciones'),
+              ListTile(
+                leading: Icon(Icons.settings),
+                title: Text('Configuraciones'),
+                onTap: () {
+                  Navigator.pop(context);
+                  // Acción para configuraciones
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.info),
+                title: Text('Acerca de'),
+                onTap: () {
+                  Navigator.pop(context);
+                  // Acción para acerca de
+                },
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+```
 
 ## TextField
 Se utiliza para recibir texto del usuario. Es un campo de entrada de texto donde los usuarios pueden escribir datos. Puedes personalizar su apariencia y comportamiento según tus necesidades.
