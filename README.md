@@ -44,6 +44,45 @@ A diferencia de los widgets Stateless, los widgets Stateful mantienen un estado 
 
 Un ejemplo clásico de un widget Stateful es un formulario con campos de entrada de texto, como TextField, donde el usuario puede introducir datos. Otro ejemplo sería un botón cuyo aspecto cambia cuando se presiona, como cambiar de color o tamaño.
 
+### MaterialApp: Utilizado para aplicaciones que siguen las directrices de diseño Material de Google.
+### CupertinoApp: Utilizado para aplicaciones con estilo iOS, siguiendo las directrices de diseño de Cupertino.
+
+
+### ¿Qué es TextStyle?
+TextStyle es una clase en Flutter que permite personalizar la apariencia del texto, incluyendo propiedades como el tamaño de fuente, el color, el grosor, el estilo (negrita, cursiva), y otros atributos de estilo.
+
+    Text(
+      'Hola, mundo!',
+      style: TextStyle(
+        fontSize: 24,
+        fontWeight: FontWeight.bold,
+        color: Colors.blue,
+      ),
+    )
+
+### ¿Qué es Icons?
+Icons es una clase en Flutter que contiene una serie de íconos de Material Design listos para usar. Proporciona acceso a un conjunto de íconos que puedes utilizar en tu aplicación.
+
+    Icon(
+      Icons.home, // Icono de inicio.
+      color: Colors.blue,
+      size: 30,
+    )
+    
+## IconButton 
+Es un widget en Flutter que combina un ícono con una acción interactiva. Es útil para crear botones en la interfaz de usuario que responden a los toques o clics del usuario.
+IconButton es un widget que muestra un ícono y permite al usuario interactuar con él, generalmente ejecutando una acción cuando se toca o se hace clic en el ícono.
+
+    IconButton(
+      icon: Icon(Icons.favorite, color: Colors.red),
+      onPressed: () {
+        // Acción a realizar cuando se toca el botón.
+        print('Ícono de favorito tocado');
+      },
+    )
+
+
+
 #### Widget Scaffold
 El Scaffold es el armazón de tu aplicación Flutter. Proporciona la estructura básica para la mayoría de las aplicaciones móviles, incluyendo elementos como barras de navegación, cajones de navegación (drawers) y barras de estado. Esencialmente, es el lienzo en el que pintas tu interfaz de usuario.
     
@@ -1533,7 +1572,8 @@ Uso:
 
 
 ## Divider
-Es un widget en Flutter que se utiliza para dividir visualmente el contenido en una lista o en un contenedor. Generalmente se utiliza para separar elementos de una lista o para crear una línea de separación entre secciones de la interfaz de usuario.
+Es un widget en Flutter que se utiliza para dividir visualmente el contenido en una lista o en un contenedor.
+Generalmente se utiliza para separar elementos de una lista o para crear una línea de separación entre secciones de la interfaz de usuario.
 
     class MyApp extends StatelessWidget {
       @override
@@ -1587,7 +1627,101 @@ Es un widget en Flutter que se utiliza para dividir visualmente el contenido en 
     |                                          |
     +------------------------------------------+
 
+## ListTile
+ListTile es un widget de Flutter para crear filas en listas, con soporte para íconos, texto y acciones. Úsalo dentro de ListView para mostrar elementos de manera uniforme y funcional.
+Es ideal para menús, configuraciones, o listas de opciones que requieran interacción.
 
+leading: Un ícono o widget que aparece al principio del ListTile.
+title: El texto principal del ListTile.
+subtitle: Un texto secundario que aparece debajo del title.
+trailing: Un ícono o widget que aparece al final del ListTile.
+onTap: Una función que se ejecuta cuando el ListTile es tocado.
+
+```
+  import 'package:flutter/material.dart';
+
+  void main() => runApp(const MyApp());
+
+  class MyApp extends StatelessWidget {
+    const MyApp({super.key});
+
+    @override
+    Widget build(BuildContext context) {
+      return MaterialApp(
+        home: Scaffold(
+          appBar: AppBar(
+            title: const Text('Ejemplo de ListTile'),
+          ),
+          body: ListView(
+            children: [
+              ListTile(
+                leading: Icon(Icons.star, color: Colors.blue),
+                title: const Text('Elemento 1'),
+                subtitle: const Text('Descripción del elemento 1'),
+                trailing: Icon(Icons.arrow_forward),
+                onTap: () {
+                  // Acción al tocar el ListTile
+                  print('Elemento 1 tocado');
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.favorite, color: Colors.red),
+                title: const Text('Elemento 2'),
+                subtitle: const Text('Descripción del elemento 2'),
+                trailing: Icon(Icons.arrow_forward),
+                onTap: () {
+                  // Acción al tocar el ListTile
+                  print('Elemento 2 tocado');
+                },
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+  }
+```
+
+## SafeArea 
+Es un widget de Flutter que evita que el contenido se superponga con áreas no visibles de la pantalla, como el notch o las barras de estado. Sirve para asegurar que el contenido se muestre dentro de una zona segura y visible. Úsalo siempre que quieras evitar que el contenido se oculte detrás de elementos del sistema operativo.
+
+```
+  import 'package:flutter/material.dart';
+
+  void main() => runApp(const MyApp());
+
+  class MyApp extends StatelessWidget {
+    const MyApp({super.key});
+
+    @override
+    Widget build(BuildContext context) {
+      return MaterialApp(
+        home: Scaffold(
+          appBar: AppBar(
+            title: const Text('Ejemplo de SafeArea'),
+          ),
+          body: SafeArea(
+            child: Column(
+              children: [
+                Container(
+                  color: Colors.blue,
+                  height: 200,
+                  child: const Center(child: Text('Contenido Seguro', style: TextStyle(color: Colors.white))),
+                ),
+                Expanded(
+                  child: Container(
+                    color: Colors.red,
+                    child: const Center(child: Text('Más Contenido', style: TextStyle(color: Colors.white))),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
+    }
+  }
+```
 ## Widget GestureDetector
 GestureDetector es un widget en Flutter que detecta gestos del usuario, como toques, deslizamientos o pulsaciones largas. Funciona capturando gestos definidos (como onTap, onDoubleTap, etc.) y ejecutando una acción. Es útil para hacer interactivos los widgets, permitiendo responder a eventos táctiles en la interfaz.
 
