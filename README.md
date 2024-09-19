@@ -1982,4 +1982,147 @@ FirstPage.dart
       }
     }
 
+### Notas:
+
+    // Paquete de Flutter para construir interfaces de usuario
+    import 'package:flutter/material.dart'; 
+    
+    /**
+     * 
+     * La función void main() Es el punto de entrada de una aplicación en Dart y Flutter. Es donde el programa comienza a ejecutarse.
+     * main es la funcion principal de la app en Flutter que no puede ser sobrescrita por otras clases y ademas no devuelve ningun valor.
+     */
+    void main() {
+      // runApp es la función que se encarga de iniciar la app
+      runApp( const MiWidget()); // Punto de entrada de la app, ejecuta el widget principal
+    }
+    
+    /**
+     * En Flutter, dentro de main() normalmente se llama a runApp(), que inicia la aplicación y construye la interfaz de usuario.
+      Ejemplo básico:
+      void main() {
+        runApp(MyApp()); // Inicia la app de Flutter
+      }
+      - main(): Siempre debe estar presente en todo programa de Dart.
+      - runApp(): Arranca la aplicación Flutter.
+     */
+    
+    
+    /**
+     * class MiWidget extends StatefulWidget define una clase que extiende de la clase StatefulWidget.
+     * extends StatefulWidget: Significa que la clase MiWidget hereda de la clase StatefulWidget.
+     * Esto quiere decir que MiWidget es un widget que puede tener estado y puede cambiar su apariencia o comportamiento durante la ejecución de la app.
+     * En resumen, MiWidget es un widget con estado.
+     */
+    class MiWidget extends StatefulWidget {
+      // Constructor de la clase MiWidget
+      const MiWidget({super.key});
+      /**
+       * const MiWidget({super.key});
+       * Crea una instancia inmutable del widget. 
+       * Pasa la clave (key) al constructor de la clase padre (StatefulWidget), lo que ayuda a Flutter a identificar el widget en el árbol de widgets.
+       */
+    
+    
+    /**
+     * override indica que la clase MiWidget es una clase heredada de la clase StatefulWidget
+     * Es una anotación en Dart que indica que un método en una clase hija está reemplazando un método con el mismo nombre en la clase padre.
+     Sirve para asegurar que se está sobreescribiendo correctamente un método y no creando uno nuevo accidentalmente.
+     */
+      @override
+      /*
+      * La línea _MiWidgetState createState() => _MiWidgetState(); 
+      * Crea una instancia del estado _MiWidgetState asociado con el widget MiWidget. Este estado es el que gestionará el comportamiento y la apariencia del widget mientras está en uso.
+      */
+      _MiWidgetState createState() => _MiWidgetState(); // Crea el estado para este widget
+    }
+    
+    
+    /**
+     * class _MiWidgetState extends State<MiWidget> define una clase privada _MiWidgetState que extiende la clase State de Flutter. 
+     * Esta clase gestiona el estado del widget MiWidget, permitiendo que el widget se actualice y reconstruya cuando cambian sus datos internos.
+     */
+    class _MiWidgetState extends State<MiWidget> {
+      bool _isExpanded = false; // Variable privada para controlar si está expandido o no
+    
+    /**
+     * Es una funcion privada que alterna el valor de _isExpanded y actualiza la UI
+     * void: Indica que la función no devuelve ningún valor.
+     * _toggleExpansion: Nombre de la función y que es privada.
+     * (): Paréntesis para los parámetros de la función (vacíos en este caso).
+     * {}: Cuerpo de la función, donde se define su comportamiento.
+     */
+      void _toggleExpansion() {
+        setState(() {
+          _isExpanded =
+              !_isExpanded; // Alterna el valor de _isExpanded y actualiza la UI
+        });
+      }
+    
+      /**
+       * Widget build(BuildContext context) es un método que se llama cada vez que el estado del widget cambia.
+       * El método Construye y devuelve la interfaz de usuario del widget utilizando el contexto actual de la aplicación
+       */
+      Widget build(BuildContext context) {
+        return GestureDetector(
+          onTap: _toggleExpansion, // Detecta el toque y llama a _toggleExpansion
+          child: Text(_isExpanded
+              ? 'Contraer'
+              : 'Expandir'), // Muestra texto según _isExpanded
+        );
+      }
+    }
+
+
+#### Definir funciones  y llamarlas
+    // Una función que suma dos números y devuelve el resultado
+    int sumar(int a, int b) {
+      return a + b;
+    }
+    /**
+     * int: Tipo de valor que la función devolverá (en este caso, un entero).
+     * sumar: Nombre de la función.
+     * (int a, int b): Parámetros de la función, que son dos enteros.
+     * { return a + b; }: Cuerpo de la función que realiza la suma y devuelve el resultado.
+     */
+
+#### Puedes llamar a esta función en tu código así
+    void main() {
+      int resultado = sumar(5, 3);
+      print(resultado); // Imprime 8
+    
+      // Llama a la función saludar y muestra su resultado
+      String saludo = saludar('Juan');
+      print(saludo); // Imprime "Hola, Juan!"
+    
+      imprimirMensaje('¡Hola, mundo!');
+      // Imprime "¡Hola, mundo!" en la consola
+    }
+
+
+####  Función que devuelve una cadena de texto
+    /**
+     * Una función que recibe un nombre y devuelve un saludo personalizado
+     * String: Tipo de valor que la función devolverá (una cadena de texto).
+     * saludar: Nombre de la función.
+     * (String nombre): Parámetro de la función, que es una cadena de texto.
+     * { return 'Hola, $nombre!'; }: Cuerpo de la función que devuelve un saludo personalizado usando interpolación de cadenas.
+     */
+    String saludar(String nombre) {
+      return 'Hola, $nombre!';
+    }
+
+
+#### Función que no devuelve un valor
+    /**
+     * Una función que imprime un mensaje en la consola
+     * void: La función no devuelve ningún valor.
+     * imprimirMensaje: Nombre de la función.
+     * (String mensaje): Parámetro de la función, que es una cadena de texto.
+     * { print(mensaje); }: Cuerpo de la función que imprime el mensaje en la consola.
+     */
+    void imprimirMensaje(String mensaje) {
+      print(mensaje);
+    }
+
 
