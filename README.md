@@ -488,7 +488,7 @@ El widget de tipo Icon se encarga de la representación de un icono gráfico. En
     +------------------------------------------+
 
 
-## FlatButton
+## Widget FlatButton ahora conocido como TextButton 
 Es un botón sin elevación que se utiliza comúnmente para acciones simples. Aunque FlatButton ha sido reemplazado por TextButton en versiones más recientes de Flutter, la descripción y el código siguen siendo útiles para entender cómo funcionan los botones en Flutter.
 
     class MyApp extends StatelessWidget {
