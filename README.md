@@ -940,6 +940,49 @@ Es un widget en Flutter que permite al usuario seleccionar o deseleccionar una o
     |                                          |
     +------------------------------------------+
 
+## Radio Widget
+
+    import 'package:flutter/material.dart';
+    
+    class RadioExample extends StatefulWidget {
+      @override
+      _RadioExampleState createState() => _RadioExampleState();
+    }
+    
+    class _RadioExampleState extends State<RadioExample> {
+      int _radioValue = 1;
+      List<String> _radioValues = ['Option 1', 'Option 2', 'Option 3'];
+    
+      @override
+      Widget build(BuildContext context) {
+        return Scaffold(
+          appBar: AppBar(
+            title: Text('Radio Example'),
+          ),
+          body: Container(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: _radioValues
+                  .asMap()
+                  .entries
+                  .map((entry) => RadioListTile(
+                        title: Text(entry.value),
+                        value: entry.key,
+                        groupValue: _radioValue,
+                        onChanged: (value) {
+                          setState(() {
+                            _radioValue = value!;
+                          });
+                        },
+                      ))
+                  .toList(),
+            ),
+          ),
+        );
+      }
+    }
+
+
 ## Padding
 Es un widget en Flutter que permite agregar espacio adicional alrededor de un widget hijo. Se utiliza para proporcionar un margen interior, separando el contenido del borde del contenedor, lo que ayuda a mejorar la apariencia y la legibilidad.
 
