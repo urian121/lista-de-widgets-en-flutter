@@ -116,6 +116,69 @@ El Scaffold es el armazón de tu aplicación Flutter. Proporciona la estructura 
     |                                          |
     +------------------------------------------+
 
+## Propiedades del widget Scaffold
+    ```
+    Scaffold(
+      appBar: AppBar( // Barra superior de la app que generalmente contiene el título y acciones.
+        title: Text('Mi App'), // El título que se mostrará en el AppBar.
+        backgroundColor: Colors.blue, // El color de fondo del AppBar.
+      ),
+      body: Center( // El contenido principal que se mostrará en la pantalla.
+        child: Text('Hola Mundo!'), // Un texto centrado en el cuerpo del Scaffold.
+      ),
+      floatingActionButton: FloatingActionButton( // Botón flotante generalmente usado para acciones primarias.
+        onPressed: () {}, // Función que se ejecutará al presionar el botón.
+        child: Icon(Icons.add), // Icono dentro del botón flotante.
+      ),
+      drawer: Drawer( // Un menú lateral (drawer) que aparece al deslizar o presionar el icono de menú.
+        child: ListView(
+          children: <Widget>[
+            DrawerHeader( // Encabezado del drawer, donde suele ir la info del usuario o app.
+              child: Text('Encabezado del Drawer'),
+              decoration: BoxDecoration(
+                color: Colors.blue, // Color de fondo del encabezado.
+              ),
+            ),
+            ListTile(
+              title: Text('Opción 1'), // Elemento del menú con texto.
+              onTap: () {}, // Acción al seleccionar el elemento del menú.
+            ),
+          ],
+        ),
+      ),
+      bottomNavigationBar: BottomNavigationBar( // Barra de navegación en la parte inferior con varias opciones.
+        items: [
+          BottomNavigationBarItem( // Opción individual de la barra inferior.
+            icon: Icon(Icons.home), // Icono de la opción.
+            label: 'Inicio', // Texto asociado a la opción.
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Perfil',
+          ),
+        ],
+        currentIndex: 0, // El índice del elemento seleccionado actualmente.
+        onTap: (index) { // Acción que se ejecuta al seleccionar un elemento de la barra.
+          print('Seleccionado: $index');
+        },
+      ),
+      backgroundColor: Colors.grey[200], // Color de fondo de todo el Scaffold.
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked, // Ubicación del botón flotante.
+      persistentFooterButtons: [ // Lista de botones que permanecen visibles en la parte inferior.
+        ElevatedButton(
+          onPressed: () {}, 
+          child: Text('Botón 1'),
+        ),
+        ElevatedButton(
+          onPressed: () {},
+          child: Text('Botón 2'),
+        ),
+      ],
+    )
+```
+
+
+
 ## Widget ListView
 ListView es el widget diseñado para mostrar una lista de elementos desplazables. Es ideal para situaciones donde necesitas mostrar una lista de datos, como una lista de correos electrónicos o contactos.
 
