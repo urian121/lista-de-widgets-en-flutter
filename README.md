@@ -34,8 +34,6 @@ En Flutter, el widget de ListView Separated se utiliza para mostrar una lista de
 
 ListView Separated es similar al widget regular ListView, pero inserta automáticamente divisores entre sus hijos. Esto lo hace conveniente para mostrar listas de datos con separadores consistentes sin tener que gestionar manualmente el espaciado entre elementos.
 
-
-
 #### WIDGETS STATELESS
 Los widgets Stateless, como su nombre indica, son aquellos que no almacenan estado. Estos widgets son inmutables, lo que significa que sus propiedades no pueden cambiar durante su ciclo de vida. Se utiliza para mostrar texto en la aplicación y su contenido no cambia a menos que se reconstruya el widget con diferentes datos. 
 
@@ -117,7 +115,7 @@ El Scaffold es el armazón de tu aplicación Flutter. Proporciona la estructura 
     +------------------------------------------+
 
 ## Propiedades del widget Scaffold
-    ```
+
     Scaffold(
       appBar: AppBar( // Barra superior de la app que generalmente contiene el título y acciones.
         title: Text('Mi App'), // El título que se mostrará en el AppBar.
@@ -175,7 +173,7 @@ El Scaffold es el armazón de tu aplicación Flutter. Proporciona la estructura 
         ),
       ],
     )
-```
+
 
 
 
@@ -325,8 +323,8 @@ Column y Row son widgets de diseño que permiten crear interfaces flexibles y re
 ## Widget Column
 El widget Column en Flutter organiza sus hijos en una disposición vertical. Funciona alineando widgets uno debajo del otro, permitiendo personalizar su alineación y distribución a lo largo del eje vertical. Es útil para crear interfaces que requieren componentes apilados verticalmente. Además, admite personalización de espaciamiento, alineación y expansión dentro de su contenedor.
 
-```
-  Column(
+
+    Column(
     mainAxisAlignment: MainAxisAlignment.center, // Alinea los elementos en el centro verticalmente.
     crossAxisAlignment: CrossAxisAlignment.stretch, // Estira los elementos horizontalmente para que ocupen todo el ancho.
     children: <Widget>[
@@ -361,9 +359,7 @@ El widget Column en Flutter organiza sus hijos en una disposición vertical. Fun
         ),
       ),
     ],
-  )
-```
-
+    )
 
 
     +------------------------------------------+
@@ -392,6 +388,7 @@ El widget Row es muy similar a Column, excepto que el eje en el que se colocan l
 
 ## Widget Stack
 El widget Stack te permite superponer widgets sobre otros. Es útil cuando quieres colocar widgets encima de otro, como un texto sobre una imagen.
+
     Stack(
         alignment: Alignment.center,
         children: <Widget>[
@@ -652,32 +649,31 @@ IconButton es un widget que muestra un ícono y permite al usuario interactuar c
 ## NavigationBar
 Es un widget en Flutter que proporciona una barra de navegación en la parte inferior de la pantalla, permitiendo a los usuarios navegar entre diferentes secciones de una aplicación. Es similar al BottomNavigationBar, pero ofrece una apariencia y funcionalidad más moderna.
 
-```
-  NavigationBar(
-    destinations: [
-      NavigationDestination(
-        icon: Icon(Icons.home),
-        label: 'Inicio',
-      ),
-      NavigationDestination(
-        icon: Icon(Icons.search),
-        label: 'Buscar',
-      ),
-      NavigationDestination(
-        icon: Icon(Icons.notifications),
-        label: 'Notificaciones',
-      ),
-      NavigationDestination(
-        icon: Icon(Icons.account_circle),
-        label: 'Perfil',
-      ),
-    ],
-    onDestinationSelected: (int index) {
-      // Acción a realizar al seleccionar un destino.
-    },
-  )
+      NavigationBar(
+        destinations: [
+          NavigationDestination(
+            icon: Icon(Icons.home),
+            label: 'Inicio',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.search),
+            label: 'Buscar',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.notifications),
+            label: 'Notificaciones',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.account_circle),
+            label: 'Perfil',
+          ),
+        ],
+        onDestinationSelected: (int index) {
+          // Acción a realizar al seleccionar un destino.
+        },
+      )
 
-```
+
 ## Slider
 Es un widget en Flutter que permite a los usuarios seleccionar un valor de un rango continuo moviendo un control deslizante. Es útil para ajustes que requieren un rango de valores, como volúmenes, brillo, o cualquier configuración numérica
 
@@ -697,72 +693,67 @@ Es un widget en Flutter que permite a los usuarios seleccionar un valor de un ra
 ## SimpleDialog
 Es un widget en Flutter que muestra un cuadro de diálogo sencillo con una lista de opciones o un mensaje. Es útil para presentar una selección de opciones o mostrar información sin necesidad de una interacción compleja.
 
-```
-void _showDialog(BuildContext context) {
-  showDialog(
-    context: context,
-    builder: (BuildContext context) {
-      return SimpleDialog(
-        title: Text('Selecciona una opción'),
-        children: <Widget>[
-          SimpleDialogOption(
-            onPressed: () {
-              Navigator.pop(context, 'Opción 1');
-            },
-            child: Text('Opción 1'),
-          ),
-          SimpleDialogOption(
-            onPressed: () {
-              Navigator.pop(context, 'Opción 2');
-            },
-            child: Text('Opción 2'),
-          ),
-        ],
+    void _showDialog(BuildContext context) {
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return SimpleDialog(
+            title: Text('Selecciona una opción'),
+            children: <Widget>[
+              SimpleDialogOption(
+                onPressed: () {
+                  Navigator.pop(context, 'Opción 1');
+                },
+                child: Text('Opción 1'),
+              ),
+              SimpleDialogOption(
+                onPressed: () {
+                  Navigator.pop(context, 'Opción 2');
+                },
+                child: Text('Opción 2'),
+              ),
+            ],
+          );
+        },
       );
-    },
-  );
-}
-
-```
+    }
 
 ## BottomSheet
 Es un widget en Flutter que muestra una hoja deslizante desde la parte inferior de la pantalla. Se usa para presentar opciones adicionales, acciones o información de manera que el usuario pueda interactuar sin cambiar de pantalla.
 
-```
-  void _showBottomSheet(BuildContext context) {
-    showModalBottomSheet(
-      context: context,
-      builder: (BuildContext context) {
-        return Container(
-          padding: EdgeInsets.all(16),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              Text('Opciones'),
-              ListTile(
-                leading: Icon(Icons.settings),
-                title: Text('Configuraciones'),
-                onTap: () {
-                  Navigator.pop(context);
-                  // Acción para configuraciones
-                },
+      void _showBottomSheet(BuildContext context) {
+        showModalBottomSheet(
+          context: context,
+          builder: (BuildContext context) {
+            return Container(
+              padding: EdgeInsets.all(16),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  Text('Opciones'),
+                  ListTile(
+                    leading: Icon(Icons.settings),
+                    title: Text('Configuraciones'),
+                    onTap: () {
+                      Navigator.pop(context);
+                      // Acción para configuraciones
+                    },
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.info),
+                    title: Text('Acerca de'),
+                    onTap: () {
+                      Navigator.pop(context);
+                      // Acción para acerca de
+                    },
+                  ),
+                ],
               ),
-              ListTile(
-                leading: Icon(Icons.info),
-                title: Text('Acerca de'),
-                onTap: () {
-                  Navigator.pop(context);
-                  // Acción para acerca de
-                },
-              ),
-            ],
-          ),
+            );
+          },
         );
-      },
-    );
-  }
+      }
 
-```
 
 ## TextField
 Se utiliza para recibir texto del usuario. Es un campo de entrada de texto donde los usuarios pueden escribir datos. Puedes personalizar su apariencia y comportamiento según tus necesidades.
@@ -901,8 +892,6 @@ Es un widget en Flutter que muestra un botón flotante sobre el contenido de la 
     |                 +------ +                |
     |                                          |
     +------------------------------------------+
-
-
 
 
 ## ElevatedButton
@@ -1134,6 +1123,25 @@ Es un widget en Flutter que proporciona una interfaz visual de contenedor con bo
     |       +------------------------------+   |
     |                                          |
     +------------------------------------------+
+
+## Propiedades del Card
+    Card(
+      color: Colors.blue, // Establece el color de fondo de la tarjeta.
+      elevation: 8, // Define la sombra debajo de la tarjeta, mayor valor significa más profundidad.
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(15.0), // Establece el borde redondeado de la tarjeta con un radio de 15.
+      ),
+      margin: EdgeInsets.all(16.0), // Define el margen exterior de la tarjeta.
+      borderOnForeground: false, // Indica si el borde debe estar en primer plano. Aquí está deshabilitado.
+      clipBehavior: Clip.antiAlias, // Suaviza los bordes cuando el contenido se recorta dentro de la tarjeta.
+      semanticContainer: true, // Añade etiquetas semánticas para mejorar la accesibilidad.
+      shadowColor: Colors.red, // Establece el color de la sombra debajo de la tarjeta.
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(30.0), // (Duplicado) Bordes redondeados de 30, aunque esta propiedad está repetida.
+      ),
+      child: Text('This is a card'), // El contenido de la tarjeta, en este caso un texto simple.
+    )
+    
 
 ## SizedBox
 Añade un espacio fijo entre los widgets. Puedes especificar el ancho y la altura del espacio.
@@ -1880,43 +1888,42 @@ onTap: Una función que se ejecuta cuando el ListTile es tocado.
 ## SafeArea 
 Es un widget de Flutter que evita que el contenido se superponga con áreas no visibles de la pantalla, como el notch o las barras de estado. Sirve para asegurar que el contenido se muestre dentro de una zona segura y visible. Úsalo siempre que quieras evitar que el contenido se oculte detrás de elementos del sistema operativo.
 
-```
-  import 'package:flutter/material.dart';
-
-  void main() => runApp(const MyApp());
-
-  class MyApp extends StatelessWidget {
-    const MyApp({super.key});
-
-    @override
-    Widget build(BuildContext context) {
-      return MaterialApp(
-        home: Scaffold(
-          appBar: AppBar(
-            title: const Text('Ejemplo de SafeArea'),
-          ),
-          body: SafeArea(
-            child: Column(
-              children: [
-                Container(
-                  color: Colors.blue,
-                  height: 200,
-                  child: const Center(child: Text('Contenido Seguro', style: TextStyle(color: Colors.white))),
+      import 'package:flutter/material.dart';
+      void main() => runApp(const MyApp());
+    
+      class MyApp extends StatelessWidget {
+        const MyApp({super.key});
+    
+        @override
+        Widget build(BuildContext context) {
+          return MaterialApp(
+            home: Scaffold(
+              appBar: AppBar(
+                title: const Text('Ejemplo de SafeArea'),
+              ),
+              body: SafeArea(
+                child: Column(
+                  children: [
+                    Container(
+                      color: Colors.blue,
+                      height: 200,
+                      child: const Center(child: Text('Contenido Seguro', style: TextStyle(color: Colors.white))),
+                    ),
+                    Expanded(
+                      child: Container(
+                        color: Colors.red,
+                        child: const Center(child: Text('Más Contenido', style: TextStyle(color: Colors.white))),
+                      ),
+                    ),
+                  ],
                 ),
-                Expanded(
-                  child: Container(
-                    color: Colors.red,
-                    child: const Center(child: Text('Más Contenido', style: TextStyle(color: Colors.white))),
-                  ),
-                ),
-              ],
+              ),
             ),
-          ),
-        ),
-      );
-    }
-  }
-```
+          );
+        }
+      }
+
+
 ## Widget GestureDetector
 GestureDetector es un widget en Flutter que detecta gestos del usuario, como toques, deslizamientos o pulsaciones largas. Funciona capturando gestos definidos (como onTap, onDoubleTap, etc.) y ejecutando una acción. Es útil para hacer interactivos los widgets, permitiendo responder a eventos táctiles en la interfaz.
 
@@ -1975,7 +1982,6 @@ Primero, define dos pantallas (widgets) entre las que quieras navegar.
 FirstPage.dart
     
     import 'package:flutter/material.dart';
-    
     class FirstPage extends StatelessWidget {
       @override
       Widget build(BuildContext context) {
