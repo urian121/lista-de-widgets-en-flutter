@@ -429,6 +429,15 @@ El widget Row es muy similar a Column, excepto que el eje en el que se colocan l
     |                                          |
     +------------------------------------------+
 
+## Cómo funcionan las propiedades "CrossAxisAlignment" y "MainAxisAlignment"?
+Antes de sumergirnos en ejemplos específicos de Column y Row, es esencial entender estas dos propiedades, ya que son fundamentales para la alineación y distribución de widgets.
+
+- **MainAxisAlignment:** Esta propiedad define cómo se alinearán los hijos a lo largo del eje principal del widget. En el caso de Column, el eje principal es vertical, mientras que en Row, es horizontal.
+Algunos de los valores que puedes usar incluyen start, end, center, spaceBetween, spaceAround y spaceEvenly.
+- **CrossAxisAlignment:** Define cómo se alinearán los hijos a lo largo del eje transversal, que es perpendicular al eje principal. Para Column, el eje transversal es horizontal, mientras que para Row, es vertical.
+Los valores comunes son start, end, center y stretch.
+
+    
 ## Widget Stack
 El widget Stack te permite superponer widgets sobre otros. Es útil cuando quieres colocar widgets encima de otro, como un texto sobre una imagen.
 
