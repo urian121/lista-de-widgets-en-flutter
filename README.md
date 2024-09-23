@@ -45,6 +45,24 @@ Un ejemplo clásico de un widget Stateful es un formulario con campos de entrada
 #### MaterialApp: Utilizado para aplicaciones que siguen las directrices de diseño Material de Google.
 #### CupertinoApp: Utilizado para aplicaciones con estilo iOS, siguiendo las directrices de diseño de Cupertino.
 
+#### Comparativa entre SliverAppBar, SliverList, SliverGrid, GridView y CustomScrollView en Flutter
+
+| **Concepto**       | **Descripción**                                                                                                                                                      | **Casos de Uso**                                                                                                                                                                                                 | **Características Clave**                                                                                                  |
+|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| **SliverAppBar**    | Un AppBar que se comporta como una sliver. Puede expandirse, colapsarse y permanecer fija según el scroll.                                                           | Útil para crear encabezados que se desplazan con la página o que se expanden/colapsan al hacer scroll. Por ejemplo, en pantallas con imágenes de encabezado como las de perfiles.                               | Expansión, colapso, flotante, puede estar fija o desaparecer al hacer scroll.                                               |
+| **SliverList**      | Crea una lista que se puede desplazar de forma eficiente, con widgets dispuestos en una columna.                                                                      | Ideal para listas grandes donde el contenido se carga de forma diferida o cuando se quiere combinar con otras slivers dentro de un `CustomScrollView`.                                                          | Eficiente para manejar grandes listas de widgets, permite carga perezosa.                                                   |
+| **SliverGrid**      | Similar a `SliverList` pero organiza los elementos en un formato de cuadrícula.                                                                                       | Ideal para galerías de imágenes o pantallas con elementos que necesitan una disposición en cuadrícula y que requieren combinarse con otros widgets de scroll en una sola vista.                                | Personalizable, permite diferentes estilos de grilla, como cuadrículas uniformes o adaptativas.                             |
+| **GridView**        | Un widget que organiza elementos en una cuadrícula y es parte del árbol de scroll.                                                                                    | Usado para mostrar listas de elementos en cuadrículas cuando no se necesita combinar con otros tipos de slivers. Por ejemplo, para una galería de fotos o una lista de productos en un formato de cuadrícula.   | Más sencillo que `SliverGrid`, no necesita estar dentro de un `CustomScrollView`.                                           |
+| **CustomScrollView**| Un widget que permite usar múltiples slivers para crear un efecto de desplazamiento complejo con diferentes tipos de listas, grids y widgets en una sola vista.        | Útil cuando se necesita combinar múltiples widgets de scroll como `SliverAppBar`, `SliverList` o `SliverGrid` en una sola pantalla. Ideal para pantallas complejas con diferentes secciones desplazables.        | Permite combinar diferentes tipos de slivers (listas, grids, app bars) en un solo scroll, da flexibilidad en el diseño.     |
+
+### Resumen de uso:
+- **SliverAppBar**: Encabezados que se expanden/colapsan.
+- **SliverList**: Listas largas dentro de un `CustomScrollView`.
+- **SliverGrid**: Cuadrículas dentro de un `CustomScrollView`.
+- **GridView**: Cuadrículas sin la necesidad de combinar múltiples slivers.
+- **CustomScrollView**: Scroll avanzado con múltiples componentes (listas, grids, app bars).
+
+
 #### List.generate
 Te permite crear una lista con un número determinado de elementos, y cada elemento se crea mediante una función que se llama para cada índice de la lista.
 
