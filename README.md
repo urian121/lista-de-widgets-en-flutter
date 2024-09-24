@@ -447,7 +447,7 @@ Antes de sumergirnos en ejemplos específicos de Column y Row, es esencial enten
 
 - **MainAxisAlignment:** Alineación del eje principal. Esta propiedad define cómo se alinearán los hijos a lo largo del eje principal del widget. En el caso de Column, el eje principal es vertical, mientras que en Row, es horizontal.
 Algunos de los valores que puedes usar incluyen start, end, center, spaceBetween, spaceAround y spaceEvenly.
-- **CrossAxisAlignment:** Alineación Del Eje Cruzado. Define cómo se alinearán los hijos a lo largo del eje transversal, que es perpendicular al eje principal. Para Column, el eje transversal es horizontal, mientras que para Row, es vertical.
+- **CrossAxisAlignment:** Alineación Del Eje Cruzado. Es una propiedad que define cómo se alinearán los hijos a lo largo del eje transversal, que es perpendicular al eje principal. Para Column, el eje transversal es horizontal, mientras que para Row, es vertical.
 Los valores comunes son start, end, center y stretch.
 
 
@@ -1842,6 +1842,161 @@ SliverGridDelegateWithFixedCrossAxisCount define el diseño de la cuadrícula co
         );
       }
     }
+
+## Widget SingleChildScrollView
+Ees un widget en Flutter que permite que su único hijo sea desplazable (scrollable) cuando su contenido excede las dimensiones de su contenedor, ya sea horizontal o verticalmente. Es útil cuando el contenido de una vista no cabe en pantalla, pero no es lo suficientemente extenso para usar widgets optimizados como ListView.
+
+Explicación:
+
+    **SingleChildScrollView:** Permite desplazamiento vertical o horizontal para el contenido que no cabe en la pantalla.
+    **child:** Aquí se coloca cualquier widget como hijo, en este caso un Column con varios contenedores.
+    **List.generate(20, ...):** Genera 20 elementos para mostrar en una columna desplazable.
+
+Este ejemplo muestra una lista vertical de contenedores que se pueden desplazar usando el SingleChildScrollView.
+
+  import 'package:flutter/material.dart';
+
+  void main() {
+    runApp(MyApp());
+  }
+
+  class MyApp extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+      return MaterialApp(
+        home: Scaffold(
+          appBar: AppBar(title: Text('SingleChildScrollView Example')),
+          body: SingleChildScrollView(
+            child: Column(
+              children: List.generate(20, (index) {
+                return Container(
+                  margin: EdgeInsets.all(10),
+                  color: Colors.blueAccent,
+                  height: 100,
+                  child: Center(
+                    child: Text(
+                      'Item $index',
+                      style: TextStyle(color: Colors.white, fontSize: 24),
+                    ),
+                  ),
+                );
+              }),
+            ),
+          ),
+        ),
+      );
+    }
+  }
+
+
+## listView.builder con desplazamiento horizontal 
+Explicación:
+
+    **ListView.builder:** Crea una lista con desplazamiento horizontal.
+    **scrollDirection:** Axis.horizontal: Define la dirección del scroll como horizontal.
+    **itemCount: 10:** Establece 10 elementos en la lista.
+    **itemBuilder:** Genera cada elemento, con un Container para cada item, donde se personaliza el contenido (texto en este caso).
+Este ejemplo mostrará una lista horizontal con 10 contenedores, cada uno con un texto dentro
+
+  import 'package:flutter/material.dart';
+
+  void main() {
+    runApp(MyApp());
+  }
+
+  class MyApp extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+      return MaterialApp(
+        home: Scaffold(
+          appBar: AppBar(title: Text('Horizontal ListView')),
+          body: HorizontalListView(),
+        ),
+      );
+    }
+  }
+
+  class HorizontalListView extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+      return Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Container(
+          height: 150, // Altura fija para el ListView horizontal
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal, // Desplazamiento horizontal
+            itemCount: 10, // Número de elementos en la lista
+            itemBuilder: (context, index) {
+              return Container(
+                width: 150, // Ancho fijo para cada elemento
+                margin: EdgeInsets.all(8),
+                color: Colors.blueAccent,
+                child: Center(
+                  child: Text(
+                    'Item $index',
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                ),
+              );
+            },
+          ),
+        ),
+      );
+    }
+  }
+
+## Una alternativa a ListView.builder para crear una lista horizontal
+En Flutter es usar el widget SingleChildScrollView con la dirección de desplazamiento configurada a horizontal y un Row para disponer los elementos.
+
+Explicación:
+
+    **SingleChildScrollView:** Este widget permite desplazamiento, en este caso configurado para ser horizontal con scrollDirection: Axis.horizontal.
+    **Row:** Dentro del **SingleChildScrollView** usamos un Row para disponer los elementos en línea horizontal.
+    **List.generate:** Crea una lista de contenedores, similar a itemBuilder en ListView.builder, pero dentro del Row.
+
+Esta alternativa es útil cuando no necesitas optimización avanzada para listas largas y quieres algo más sencillo para pocos elementos.
+
+  import 'package:flutter/material.dart';
+
+  void main() {
+    runApp(MyApp());
+  }
+
+  class MyApp extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+      return MaterialApp(
+        home: Scaffold(
+          appBar: AppBar(title: Text('Horizontal ScrollView')),
+          body: HorizontalScrollView(),
+        ),
+      );
+    }
+  }
+
+  class HorizontalScrollView extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+      return SingleChildScrollView(
+        scrollDirection: Axis.horizontal, // Desplazamiento horizontal
+        child: Row(
+          children: List.generate(10, (index) {
+            return Container(
+              width: 150, // Ancho fijo para cada elemento
+              margin: EdgeInsets.all(8),
+              color: Colors.greenAccent,
+              child: Center(
+                child: Text(
+                  'Item $index',
+                  style: TextStyle(color: Colors.black, fontSize: 20),
+                ),
+              ),
+            );
+          }),
+        ),
+      );
+    }
+  }
 
 
 
