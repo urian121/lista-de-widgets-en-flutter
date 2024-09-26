@@ -82,6 +82,24 @@ Un widget que permite usar múltiples slivers para crear un efecto de desplazami
 - **GridView**: Cuadrículas sin la necesidad de combinar múltiples slivers.
 - **CustomScrollView**: Scroll avanzado con múltiples componentes (listas, grids, app bars).
 
+#### Widget ClipRRect
+ClipRRect es un widget en Flutter que permite recortar su hijo con bordes redondeados, utilizando un BorderRadius especificado. Esto es útil para crear interfaces más estéticas al suavizar los bordes de los widgets, como imágenes o contenedores.
+
+Caso de Uso:
+Se utiliza comúnmente para mostrar imágenes con esquinas redondeadas, lo que mejora la apariencia visual en aplicaciones. Por ejemplo, al mostrar una lista de fotos, puedes envolver cada Image en un ClipRRect para que las imágenes se vean más atractivas y modernas.
+
+   return ClipRRect(
+     borderRadius: BorderRadius.circular(15), // Ajusta el valor del radio
+     child: Container(
+       width: 350,
+       margin: const EdgeInsets.symmetric(horizontal: 5), // Espaciado entre imágenes
+       child: Image.asset(
+         imgList[index],
+         fit: BoxFit.cover, // Ajusta la imagen
+       ),
+     ),
+   );
+
 
 #### List.generate
 Te permite crear una lista con un número determinado de elementos, y cada elemento se crea mediante una función que se llama para cada índice de la lista.
