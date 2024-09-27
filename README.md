@@ -100,7 +100,83 @@ Se utiliza comúnmente para mostrar imágenes con esquinas redondeadas, lo que m
      ),
    );
 
+#### CircleAvatar
+Es un widget en Flutter que se utiliza para mostrar imágenes o iconos en una forma circular. Es comúnmente utilizado para mostrar imágenes de perfil o avatares en aplicaciones.
+Atributos importantes de CircleAvatar:
 
+- **backgroundImage:** Permite establecer una imagen desde la red o desde un archivo local.
+- **child:** Puedes incluir un widget hijo dentro del círculo, como un ícono o texto.
+- **radius:** Controla el tamaño del círculo (por defecto, es de 20.0).
+
+     @override
+     Widget build(BuildContext context) {
+       return MaterialApp(
+         home: Scaffold(
+           appBar: AppBar(title: Text('CircleAvatar Example')),
+           body: Center(
+             child: CircleAvatar(
+               radius: 50, // Tamaño del círculo
+               backgroundImage: NetworkImage(
+                 'https://www.example.com/avatar.jpg',
+               ), // Imagen desde la red
+               backgroundColor: Colors.blue, // Color de fondo si no hay imagen
+               child: Text('A'), // Texto dentro del círculo si es necesario
+             ),
+           ),
+         ),
+       );
+     }
+
+#### El widget ClipOval
+En Flutter se usa para recortar un widget hijo en una forma ovalada o circular. Es útil cuando quieres que cualquier widget, como imágenes o botones, tengan bordes circulares u ovalados.
+Características principales:
+
+- **child:** El widget que será recortado en forma ovalada o circular.
+- **clipBehavior:** Define cómo manejar el recorte, por defecto es Clip.antiAlias.
+
+     @override
+     Widget build(BuildContext context) {
+       return MaterialApp(
+         home: Scaffold(
+           appBar: AppBar(title: Text('ClipOval Example')),
+           body: Center(
+             child: ClipOval(
+               child: Image.network(
+                 'https://www.example.com/image.jpg',
+                 width: 100,
+                 height: 100,
+                 fit: BoxFit.cover, // Para ajustar la imagen dentro del ovalo
+               ),
+             ),
+           ),
+         ),
+       );
+     }
+
+#### El widget FlutterLogo
+Es un widget integrado en Flutter que muestra el logotipo oficial de Flutter. Es útil para mostrar el logotipo en diferentes tamaños y configuraciones en tu aplicación.
+Atributos importantes:
+
+- **size:** Tamaño del logotipo (en ancho y alto).
+- **style:** Define el estilo del logotipo. Puedes usar FlutterLogoStyle.markOnly, FlutterLogoStyle.horizontal, o FlutterLogoStyle.stacked.
+- **textColor:** Cambia el color del texto que acompaña al logotipo.
+
+     @override
+     Widget build(BuildContext context) {
+       return MaterialApp(
+         home: Scaffold(
+           appBar: AppBar(title: Text('FlutterLogo Example')),
+           body: Center(
+             child: FlutterLogo(
+               size: 100, // Tamaño del logo
+               style: FlutterLogoStyle.stacked, // Estilo del logo
+               textColor: Colors.blue, // Color del texto "Flutter"
+             ),
+           ),
+         ),
+       );
+     }
+    
 #### List.generate
 Te permite crear una lista con un número determinado de elementos, y cada elemento se crea mediante una función que se llama para cada índice de la lista.
 
