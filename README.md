@@ -1,9 +1,11 @@
 # <img width="48" height="48" src="https://miro.medium.com/v2/resize:fit:720/format:webp/0*Y37daFMFwerE_zUr.jpg" alt="logo flutter"/> Lista de Widgets en Flutter 😲
 
 #### Los Widgets
+
 Son los bloques de construcción fundamentales para crear interfaces de usuario interactivas y visualmente atractivas en las aplicaciones. En Flutter, todo es un widget.
 
 #### Tipos de Widgets en Flutter
+
 Flutter ofrece una amplia gama de widgets, pero en su núcleo, estos se dividen en dos categorías principales: Stateless y Stateful.
 
 #### ¿Qué es Flutter?
@@ -13,27 +15,24 @@ Flutter es un framework potente que optimiza el desarrollo de aplicaciones móvi
 
 **Principales ventajas de Flutter:**
 
-    **Lenguaje Dart:**
-    Flutter utiliza Dart, un lenguaje moderno y eficiente que combina la simplicidad de la sintaxis de C con características orientadas a objetos. Dart puede compilarse tanto en código nativo como en JavaScript, lo que lo hace versátil.
+**Lenguaje Dart:**
+Flutter utiliza Dart, un lenguaje moderno y eficiente que combina la simplicidad de la sintaxis de C con características orientadas a objetos. Dart puede compilarse tanto en código nativo como en JavaScript, lo que lo hace versátil.
 
-    **Hot Reload:**
-    La función de Hot Reload permite ver cambios en el código de manera instantánea sin recompilar toda la aplicación, lo que acelera el desarrollo, facilita la depuración y mejora las pruebas.
+**Hot Reload:**
+La función de Hot Reload permite ver cambios en el código de manera instantánea sin recompilar toda la aplicación, lo que acelera el desarrollo, facilita la depuración y mejora las pruebas.
 
-    **Multiplataforma:**
-    Con Flutter, puedes crear aplicaciones para iOS y Android con una sola base de código, reduciendo significativamente el tiempo y esfuerzo de desarrollo.
-
-    **Interfaz de Usuario Personalizable:**
-    Flutter permite modificar cada píxel en pantalla gracias al soporte para Material Design de Google y Cupertino de Apple, brindando flexibilidad total para crear interfaces complejas y atractivas.
+**Multiplataforma:**
+Con Flutter, puedes crear aplicaciones para iOS y Android con una sola base de código, reduciendo significativamente el tiempo y esfuerzo de desarrollo.
 
 #### Ventajas en usar flutter
 
-Flutter reduce los costes de desarrollo hasta en un 40% y acelera el tiempo para comercializar con una base de código única para aplicaciones móviles, web y de escritorio.
-También reduce los costos de mantenimiento y simplifica las actualizaciones de la plataforma cruzada.
-Además, Flutter facilita la expansión a nuevas plataformas y llega a un público más amplio sin esfuerzo adicional.
+- Flutter reduce los costes de desarrollo hasta en un 40% y acelera el tiempo para comercializar con una base de código única para aplicaciones móviles, web y de escritorio.
+- También reduce los costos de mantenimiento y simplifica las actualizaciones de la plataforma cruzada.
+- Además, Flutter facilita la expansión a nuevas plataformas y llega a un público más amplio sin esfuerzo adicional.
 
 #### ¿Qué es Dart?
 
-Dart es un lenguaje de programación de código abierto, orientado a objetos y multiplataforma creado por Google para el desarrollo de aplicaciones móviles, web y de escritorio sofisticadas de alto rendimiento. Tiene un gran conjunto de APIs, lo que hace que sea sencillo crear aplicaciones iOS y Android y las extensas bibliotecas permiten a los desarrolladores acceder a la base de datos y otros servicios externos con relativa facilidad. 
+Dart es un lenguaje de programación de código abierto, orientado a objetos y multiplataforma creado por Google para el desarrollo de aplicaciones móviles, web y de escritorio sofisticadas de alto rendimiento. Tiene un gran conjunto de APIs, lo que hace que sea sencillo crear aplicaciones iOS y Android y las extensas bibliotecas permiten a los desarrolladores acceder a la base de datos y otros servicios externos con relativa facilidad.
 
 #### ListView Separated widget
 
@@ -42,17 +41,27 @@ En Flutter, el widget de ListView Separated se utiliza para mostrar una lista de
 ListView Separated es similar al widget regular ListView, pero inserta automáticamente divisores entre sus hijos. Esto lo hace conveniente para mostrar listas de datos con separadores consistentes sin tener que gestionar manualmente el espaciado entre elementos.
 
 #### Widget STATELESS
-Los widgets Stateless, como su nombre indica, son aquellos que no almacenan estado. Estos widgets son inmutables, lo que significa que sus propiedades no pueden cambiar durante su ciclo de vida. Se utiliza para mostrar texto en la aplicación y su contenido no cambia a menos que se reconstruya el widget con diferentes datos. 
+
+Los widgets Stateless, como su nombre indica, son aquellos que no almacenan estado. Estos widgets son inmutables, lo que significa que sus propiedades no pueden cambiar durante su ciclo de vida. Se utiliza para mostrar texto en la aplicación y su contenido no cambia a menos que se reconstruya el widget con diferentes datos.
 
 #### Widget STATEFUL
-A diferencia de los widgets Stateless, los widgets Stateful mantienen un estado que puede cambiar durante su ciclo de vida. Estos widgets son cruciales para partes de la interfaz de usuario que deben responder a eventos de usuario o cambios de datos. Un widget Stateful consta de dos clases: una para el widget en sí y otra para su estado.
+
+A diferencia de los widgets Stateless, los widgets Stateful mantienen un estado que puede cambiar durante su ciclo de vida. Estos widgets son cruciales para partes de la interfaz de usuario que deben responder a eventos de usuario o cambios de datos.
+Un widget Stateful consta de dos clases: una para el widget en sí y otra para su estado.
 
 Un ejemplo clásico de un widget Stateful es un formulario con campos de entrada de texto, como TextField, donde el usuario puede introducir datos. Otro ejemplo sería un botón cuyo aspecto cambia cuando se presiona, como cambiar de color o tamaño.
 
-#### MaterialApp: Utilizado para aplicaciones que siguen las directrices de diseño Material de Google.
-#### CupertinoApp: Utilizado para aplicaciones con estilo iOS, siguiendo las directrices de diseño de Cupertino.
+#### MaterialApp:
 
-#### Diferencias entre `SliverAppBar, SliverList, SliverGrid, GridView y CustomScrollView` en Flutter
+Utilizado para aplicaciones que siguen las directrices de diseño Material de Google.
+
+#### CupertinoApp:
+
+Utilizado para aplicaciones con estilo iOS, siguiendo las directrices de diseño de Cupertino.
+
+#### Diferencias entre:
+
+**`SliverAppBar, SliverList, SliverGrid, GridView y CustomScrollView`**
 
 **SliverAppBar**
 Es una versión especial de AppBar que se comporta como un sliver, es decir, puede expandirse, contraerse o permanecer fija en función del desplazamiento (scroll) de la vista.
@@ -60,7 +69,7 @@ Un AppBar que se comporta como una sliver. Puede expandirse, colapsarse y perman
 
 **SliverList**
 Crea una lista desplazable de manera eficiente, organizando los widgets en una única columna, ideal para listas largas con elementos dinámicos.
-Crea una lista que se puede desplazar de forma eficiente, con widgets dispuestos en una columna.  
+Crea una lista que se puede desplazar de forma eficiente, con widgets dispuestos en una columna.
 
 **SliverGrid**
 Similar a SliverList, pero organiza los widgets en un formato de cuadrícula (grid), permitiendo distribuir los elementos en filas y columnas dentro de una vista desplazable.
@@ -68,92 +77,100 @@ Similar a `SliverList` pero organiza los elementos en un formato de cuadrícula.
 
 **GridView**
 Es un widget independiente que organiza elementos en una cuadrícula. Aunque también es desplazable, no está optimizado como los slivers para trabajar en conjunto con otros widgets desplazables.
-Un widget que organiza elementos en una cuadrícula y es parte del árbol de scroll.   
+Un widget que organiza elementos en una cuadrícula y es parte del árbol de scroll.
 
 **CustomScrollView**
-Es un contenedor que permite combinar varios slivers (como SliverList, SliverGrid y SliverAppBar) en una única vista desplazable, ofreciendo control total sobre cómo se manejan las transiciones y el comportamiento de los widgets durante el scroll.
-Un widget que permite usar múltiples slivers para crear un efecto de desplazamiento complejo con diferentes tipos de listas, grids y widgets en una sola vista.
-
+Es un contenedor que permite combinar varios slivers (como **SliverList, SliverGrid y SliverAppBar**) en una única vista desplazable, ofreciendo control total sobre cómo se manejan las transiciones y el comportamiento de los widgets durante el scroll.
+Te permite usar múltiples slivers para crear un efecto de desplazamiento complejo con diferentes tipos de listas, grids y widgets en una sola vista.
 
 ### Resumen de uso:
+
 - **SliverAppBar**: Encabezados que se expanden/colapsan.
-- **SliverList**: Listas largas dentro de un `CustomScrollView`.
-- **SliverGrid**: Cuadrículas dentro de un `CustomScrollView`.
+- **SliverList**: Listas largas dentro de un **`CustomScrollView`**.
+- **SliverGrid**: Cuadrículas dentro de un **`CustomScrollView`**.
 - **GridView**: Cuadrículas sin la necesidad de combinar múltiples slivers.
 - **CustomScrollView**: Scroll avanzado con múltiples componentes (listas, grids, app bars).
 
 #### Widget ClipRRect
+
 ClipRRect es un widget en Flutter que permite recortar su hijo con bordes redondeados, utilizando un BorderRadius especificado. Esto es útil para crear interfaces más estéticas al suavizar los bordes de los widgets, como imágenes o contenedores.
 
-Caso de Uso:
-Se utiliza comúnmente para mostrar imágenes con esquinas redondeadas, lo que mejora la apariencia visual en aplicaciones. Por ejemplo, al mostrar una lista de fotos, puedes envolver cada Image en un ClipRRect para que las imágenes se vean más atractivas y modernas.
+#### Caso de Uso:
 
-   return ClipRRect(
-     borderRadius: BorderRadius.circular(15), // Ajusta el valor del radio
-     child: Container(
-       width: 350,
-       margin: const EdgeInsets.symmetric(horizontal: 5), // Espaciado entre imágenes
-       child: Image.asset(
-         imgList[index],
-         fit: BoxFit.cover, // Ajusta la imagen
-       ),
-     ),
-   );
+- Mostrar imágenes con esquinas redondeadas, lo que mejora la apariencia visual en aplicaciones.
+
+- Mostrar una lista de fotos, puedes envolver cada Image en un ClipRRect para que las imágenes se vean más atractivas y modernas.
+
+        return ClipRRect(
+            borderRadius: BorderRadius.circular(15), // Ajusta el valor del radio
+                child: Container(
+                width: 350,
+                margin: const EdgeInsets.symmetric(horizontal: 5), // Espaciado entre imágenes
+                child: Image.asset(
+                    imgList[index],
+                    fit: BoxFit.cover, // Ajusta la imagen
+                ),
+                ),
+        );
 
 #### CircleAvatar
+
 Es un widget en Flutter que se utiliza para mostrar imágenes o iconos en una forma circular. Es comúnmente utilizado para mostrar imágenes de perfil o avatares en aplicaciones.
+
 Atributos importantes de CircleAvatar:
 
 - **backgroundImage:** Permite establecer una imagen desde la red o desde un archivo local.
 - **child:** Puedes incluir un widget hijo dentro del círculo, como un ícono o texto.
 - **radius:** Controla el tamaño del círculo (por defecto, es de 20.0).
 
-     @override
-     Widget build(BuildContext context) {
-       return MaterialApp(
-         home: Scaffold(
-           appBar: AppBar(title: Text('CircleAvatar Example')),
-           body: Center(
-             child: CircleAvatar(
-               radius: 50, // Tamaño del círculo
-               backgroundImage: NetworkImage(
-                 'https://www.example.com/avatar.jpg',
-               ), // Imagen desde la red
-               backgroundColor: Colors.blue, // Color de fondo si no hay imagen
-               child: Text('A'), // Texto dentro del círculo si es necesario
-             ),
-           ),
-         ),
-       );
-     }
+        @override
+        Widget build(BuildContext context) {
+        return MaterialApp(
+        home: Scaffold(
+            appBar: AppBar(title: Text('CircleAvatar Example')),
+            body: Center(
+            child: CircleAvatar(
+                radius: 50, // Tamaño del círculo
+                backgroundImage: NetworkImage(
+                'https://www.example.com/avatar.jpg',
+                ), // Imagen desde la red
+            backgroundColor: Colors.blue, // Color de fondo si no hay imagen
+            child: Text('A'), // Texto dentro del círculo si es necesario
+            ),
+        ),
+        ),
+        );
+        }
 
 #### El widget ClipOval
+
 En Flutter se usa para recortar un widget hijo en una forma ovalada o circular. Es útil cuando quieres que cualquier widget, como imágenes o botones, tengan bordes circulares u ovalados.
 Características principales:
 
 - **child:** El widget que será recortado en forma ovalada o circular.
 - **clipBehavior:** Define cómo manejar el recorte, por defecto es Clip.antiAlias.
 
-     @override
-     Widget build(BuildContext context) {
-       return MaterialApp(
-         home: Scaffold(
-           appBar: AppBar(title: Text('ClipOval Example')),
-           body: Center(
-             child: ClipOval(
-               child: Image.network(
-                 'https://www.example.com/image.jpg',
-                 width: 100,
-                 height: 100,
-                 fit: BoxFit.cover, // Para ajustar la imagen dentro del ovalo
-               ),
-             ),
-           ),
-         ),
-       );
-     }
+        @override
+        Widget build(BuildContext context) {
+        return MaterialApp(
+            home: Scaffold(
+            appBar: AppBar(title: Text('ClipOval Example')),
+            body: Center(
+                child: ClipOval(
+                child: Image.network(
+                'https://www.example.com/image.jpg',
+                width: 100,
+                height: 100,
+                fit: BoxFit.cover, // Para ajustar la imagen dentro del ovalo
+                ),
+            ),
+        ),
+        ),
+        );
+        }
 
 #### El widget FlutterLogo
+
 Es un widget integrado en Flutter que muestra el logotipo oficial de Flutter. Es útil para mostrar el logotipo en diferentes tamaños y configuraciones en tu aplicación.
 Atributos importantes:
 
@@ -161,49 +178,54 @@ Atributos importantes:
 - **style:** Define el estilo del logotipo. Puedes usar FlutterLogoStyle.markOnly, FlutterLogoStyle.horizontal, o FlutterLogoStyle.stacked.
 - **textColor:** Cambia el color del texto que acompaña al logotipo.
 
-     @override
-     Widget build(BuildContext context) {
-       return MaterialApp(
-         home: Scaffold(
-           appBar: AppBar(title: Text('FlutterLogo Example')),
-           body: Center(
-             child: FlutterLogo(
-               size: 100, // Tamaño del logo
-               style: FlutterLogoStyle.stacked, // Estilo del logo
-               textColor: Colors.blue, // Color del texto "Flutter"
-             ),
-           ),
-         ),
-       );
-     }
-    
+        @override
+        Widget build(BuildContext context) {
+        return MaterialApp(
+        home: Scaffold(
+        appBar: AppBar(title: Text('FlutterLogo Example')),
+        body: Center(
+        child: FlutterLogo(
+        size: 100, // Tamaño del logo
+        style: FlutterLogoStyle.stacked, // Estilo del logo
+        textColor: Colors.blue, // Color del texto "Flutter"
+        ),
+        ),
+        ),
+        );
+        }
+
 #### List.generate
+
 Te permite crear una lista con un número determinado de elementos, y cada elemento se crea mediante una función que se llama para cada índice de la lista.
 
 #### Ejemplo 1
+
     List<String>.generate(1000,(counter) => "Item $counter");
 
 #### Crear una lista de números del 1 al 10
+
     List<int> numbers = List.generate(10, (index) => index + 1);
     print(numbers); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 #### Ejemplo 2: Crear una lista de strings con los días de la semana
+
     List<String> days = List.generate(7, (index) => ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'][index]);
     print(days); // [Lunes, Martes, Miércoles, Jueves, Viernes, Sábado, Domingo]
 
 #### Ejemplo 3: Crear una lista de objetos personalizados
+
     class Persona {
       String nombre;
       int edad;
-    
+
       Persona(this.nombre, this.edad);
     }
-    
+
     List<Persona> personas = List.generate(5, (index) => Persona('Persona $index', index * 10));
     print(personas); // [Persona(nombre: Persona 0, edad: 0), Persona(nombre: Persona 1, edad: 10), ...]
-    
 
 #### ¿Qué es TextStyle?
+
 TextStyle es una clase en Flutter que permite personalizar la apariencia del texto, incluyendo propiedades como el tamaño de fuente, el color, el grosor, el estilo (negrita, cursiva), y otros atributos de estilo.
 
     Text(
@@ -216,6 +238,7 @@ TextStyle es una clase en Flutter que permite personalizar la apariencia del tex
     )
 
 #### ¿Qué es Icons?
+
 Icons es una clase en Flutter que contiene una serie de íconos de Material Design listos para usar. Proporciona acceso a un conjunto de íconos que puedes utilizar en tu aplicación.
 
     Icon(
@@ -225,24 +248,25 @@ Icons es una clase en Flutter que contiene una serie de íconos de Material Desi
     )
 
 #### Comando:
+
 - Este comando descarga e instala todas las dependencias especificadas en el archivo pubspec.yaml del proyecto.
-      flutter pub get
-  
+  flutter pub get
 - Este comando compila la aplicación Flutter en un archivo APK para distribución en modo release, optimizado para rendimiento.
-    flutter build apk --release
+  flutter build apk --release
 
 - Este comando elimina los archivos generados automáticamente y las carpetas de caché, ayudando a resolver problemas de compilación y a limpiar el proyecto.
-    flutter clean
+  flutter clean
 
 - Este comando compila y ejecuta la aplicación Flutter en un emulador o dispositivo conectado, iniciando la depuración en modo de desarrollo.
-    flutter run
+  flutter run
 
 - Este comando añade el paquete 'shared_preferences' a las dependencias del proyecto y lo incluye en el archivo pubspec.yaml.
-    flutter pub add nombre-del-paquete
-    
+  flutter pub add nombre-del-paquete
+
 #### Widget Scaffold
-El **Scaffold** es el armazón de tu aplicación Flutter. Proporciona la estructura básica para la mayoría de las aplicaciones móviles, incluyendo elementos como barras de navegación, cajones de navegación (drawers) y barras de estado. Esencialmente, es el lienzo en el que pintas tu interfaz de usuario.
-    
+
+Es un widget que Proporciona la estructura básica para la mayoría de las aplicaciones móviles, incluyendo elementos como barras de navegación, cajones de navegación (drawers) y barras de estado. Esencialmente, es el lienzo en el que pintas tu interfaz de usuario.
+
     @override
     Widget build(BuildContext context) {
         return Scaffold(
@@ -255,19 +279,6 @@ El **Scaffold** es el armazón de tu aplicación Flutter. Proporciona la estruct
             ),
         );
     }
-
-    +------------------------------------------+
-    |        AppBar (barra de aplicación)      |
-    |  +------------------------------------+  |
-    |  |           Ejemplo Scaffold         |  |
-    |  +------------------------------------+  |
-    |                                          |
-    |              Contenido Principal         |
-    |              (Texto centrado)            |
-    |                                          |
-    |                                          |
-    |                                          |
-    +------------------------------------------+
 
 ## Propiedades del widget Scaffold
 
@@ -319,7 +330,7 @@ El **Scaffold** es el armazón de tu aplicación Flutter. Proporciona la estruct
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked, // Ubicación del botón flotante.
       persistentFooterButtons: [ // Lista de botones que permanecen visibles en la parte inferior.
         ElevatedButton(
-          onPressed: () {}, 
+          onPressed: () {},
           child: Text('Botón 1'),
         ),
         ElevatedButton(
@@ -329,10 +340,8 @@ El **Scaffold** es el armazón de tu aplicación Flutter. Proporciona la estruct
       ],
     )
 
-
-
-
 ## Widget ListView
+
 **ListView** es el widget diseñado para mostrar una lista de elementos desplazables. Es ideal para situaciones donde necesitas mostrar una lista de datos, como una lista de correos electrónicos o contactos.
 
     ListView(
@@ -361,6 +370,7 @@ El **Scaffold** es el armazón de tu aplicación Flutter. Proporciona la estruct
     +------------------------------------------+
 
 ## ListView.builder
+
 Es un widget en Flutter que se utiliza para crear listas de manera eficiente cuando los elementos de la lista son generados dinámicamente o cuando la lista tiene muchos elementos. En lugar de crear todos los widgets de la lista de una vez (lo que podría consumir mucha memoria), ListView.builder solo crea los widgets visibles en la pantalla y genera los otros bajo demanda, lo que mejora el rendimiento.
 
 Propósito de ListView.builder
@@ -370,12 +380,12 @@ Propósito de ListView.builder
 
 Sintaxis
 
-  ListView.builder(
-    itemCount: <número de elementos>,
-    itemBuilder: (BuildContext context, int index) {
-      return <widget para cada elemento>;
-    },
-  );
+        ListView.builder(
+            itemCount: <número de elementos>,
+            itemBuilder: (BuildContext context, int index) {
+                return <widget para cada elemento>;
+            },
+        );
 
 #### Ejemplo prectico
 
@@ -391,7 +401,7 @@ Sintaxis
         );
       }
 
-    
+
     class MiLista extends StatelessWidget {
       final List<String> nombres = [
         'Carlos',
@@ -415,9 +425,9 @@ Sintaxis
         'Cristina',
         'Carmen',
       ];
-    
+
       MiLista({super.key});
-    
+
       @override
       Widget build(BuildContext context) {
         return ListView.builder(
@@ -431,9 +441,9 @@ Sintaxis
       }
     }
 
-    
 ## Widget Container
-El ***Container** es quizás el widget más versátil en Flutter. Puede usarse para crear un rectángulo visual que puede ser decorado con BoxDecoration, como un borde, un fondo, etc. También se utiliza para agregar márgenes, relleno y restricciones a los elementos de la interfaz de usuario.
+
+El **\*Container** es quizás el widget más versátil en Flutter. Puede usarse para crear un rectángulo visual que puede ser decorado con BoxDecoration, como un borde, un fondo, etc. También se utiliza para agregar márgenes, relleno y restricciones a los elementos de la interfaz de usuario.
 
     Container(
         margin: EdgeInsets.all(10.0),
@@ -460,7 +470,8 @@ El ***Container** es quizás el widget más versátil en Flutter. Puede usarse p
     +------------------------------------------+
 
 ## Widgets Column y Row
-**Column** y **Row** son widgets de diseño que permiten crear interfaces flexibles y reactivas. Column organiza los widgets verticalmente, mientras que Row los organiza horizontalmente.
+
+Column organiza los widgets verticalmente, mientras que Row los organiza horizontalmente.
 
     Column(
         children: <Widget>[
@@ -471,8 +482,8 @@ El ***Container** es quizás el widget más versátil en Flutter. Puede usarse p
     )
 
 ## Widget Column
-El widget **Column** en Flutter organiza sus hijos en una disposición vertical. Funciona alineando widgets uno debajo del otro, permitiendo personalizar su alineación y distribución a lo largo del eje vertical. Es útil para crear interfaces que requieren componentes apilados verticalmente. Además, admite personalización de espaciamiento, alineación y expansión dentro de su contenedor.
 
+El widget **Column** en Flutter organiza sus hijos en una disposición vertical. Funciona alineando widgets uno debajo del otro, permitiendo personalizar su alineación y distribución a lo largo del eje vertical. Es útil para crear interfaces que requieren componentes apilados verticalmente. Además, admite personalización de espaciamiento, alineación y expansión dentro de su contenedor.
 
     Column(
     mainAxisAlignment: MainAxisAlignment.center, // Alinea los elementos en el centro verticalmente.
@@ -483,7 +494,7 @@ El widget **Column** en Flutter organiza sus hijos en una disposición vertical.
         padding: EdgeInsets.all(16.0), // Añade espacio dentro del contenedor.
         color: Colors.blueAccent, // Color de fondo del contenedor.
         child: Text(
-          'Primero', 
+          'Primero',
           style: TextStyle(color: Colors.white), // Color del texto dentro del contenedor.
           textAlign: TextAlign.center, // Centra el texto.
         ),
@@ -493,7 +504,7 @@ El widget **Column** en Flutter organiza sus hijos en una disposición vertical.
         padding: EdgeInsets.all(16.0),
         color: Colors.greenAccent,
         child: Text(
-          'Segundo', 
+          'Segundo',
           style: TextStyle(color: Colors.white),
           textAlign: TextAlign.center,
         ),
@@ -503,7 +514,7 @@ El widget **Column** en Flutter organiza sus hijos en una disposición vertical.
         padding: EdgeInsets.all(16.0),
         color: Colors.redAccent,
         child: Text(
-          'Tercero', 
+          'Tercero',
           style: TextStyle(color: Colors.white),
           textAlign: TextAlign.center,
         ),
@@ -524,9 +535,9 @@ El widget **Column** en Flutter organiza sus hijos en una disposición vertical.
     |                                          |
     +------------------------------------------+
 
-
 ## Row
-El widget **Row** es muy similar a Column, excepto que el eje en el que se colocan los widgets hijos ya no es vertical, sino horizontal. Le permite integrar una lista de widgets hijos (children). No se pretende crear un desplazamiento horizontal, sino simplemente distribuir estos hijos en el espacio que se le asigna. 
+
+El widget **Row** es muy similar a Column, excepto que el eje en el que se colocan los widgets hijos ya no es vertical, sino horizontal. Le permite integrar una lista de widgets hijos (children). No se pretende crear un desplazamiento horizontal, sino simplemente distribuir estos hijos en el espacio que se le asigna.
 
     +------------------------------------------+
     |              Row (horizontal)            |
@@ -537,70 +548,70 @@ El widget **Row** es muy similar a Column, excepto que el eje en el que se coloc
     +------------------------------------------+
 
 ## Cómo funcionan las propiedades "CrossAxisAlignment" y "MainAxisAlignment"?
+
 Antes de sumergirnos en ejemplos específicos de Column y Row, es esencial entender estas dos propiedades, ya que son fundamentales para la alineación y distribución de widgets.
 
 - **MainAxisAlignment:** Alineación del eje principal. Esta propiedad define cómo se alinearán los hijos a lo largo del eje principal del widget. En el caso de Column, el eje principal es vertical, mientras que en Row, es horizontal.
-Algunos de los valores que puedes usar incluyen start, end, center, spaceBetween, spaceAround y spaceEvenly.
+  Algunos de los valores que puedes usar incluyen start, end, center, spaceBetween, spaceAround y spaceEvenly.
 - **CrossAxisAlignment:** Alineación Del Eje Cruzado. Es una propiedad que define cómo se alinearán los hijos a lo largo del eje transversal, que es perpendicular al eje principal. Para Column, el eje transversal es horizontal, mientras que para Row, es vertical.
-Los valores comunes son start, end, center y stretch.
-
+  Los valores comunes son start, end, center y stretch.
 
 ## Diferencia entre ListView vs GridView
 
 **ListView** y **GridView** son dos formas comunes de presentar datos en interfaces de usuario. La principal diferencia radica en cómo organizan y visualizan los elementos.
 
 **listView:**
-    **Organización:** Presenta los elementos en una lista vertical, uno debajo del otro, Se organiza en una sola columna.
-    **Uso:*** Ideal para listas de elementos que requieren una descripción detallada, Mostrar una lista de mensajes en un chat, como listas de contactos, productos o elementos de una base de datos,
-    Una aplicación de correo electrónico podría usar un listView para mostrar una lista de mensajes, con el remitente, asunto y fecha como elementos principales. historial de compras,  o resultados de búsqueda.
-
+**Organización:** Presenta los elementos en una lista vertical, uno debajo del otro, Se organiza en una sola columna.
+**Uso:\*** Ideal para listas de elementos que requieren una descripción detallada, Mostrar una lista de mensajes en un chat, como listas de contactos, productos o elementos de una base de datos,
+Una aplicación de correo electrónico podría usar un listView para mostrar una lista de mensajes, con el remitente, asunto y fecha como elementos principales. historial de compras, o resultados de búsqueda.
 
 **GridView:**
-    **Organización:** Organiza los elementos en una cuadrícula, dispuestos en filas y columnas.
-    **Uso:** Perfecto para presentar elementos visuales, como galeria de imágenes, productos en una tienda en línea, iconos o miniaturas, donde la apariencia es importante.
-    Una aplicación de fotos podría usar un GridView para mostrar una galería de imágenes en miniatura, permitiendo al usuario desplazarse rápidamente por ellas y seleccionar la que desee ver a tamaño completo.
+**Organización:** Organiza los elementos en una cuadrícula, dispuestos en filas y columnas.
+**Uso:** Perfecto para presentar elementos visuales, como galeria de imágenes, productos en una tienda en línea, iconos o miniaturas, donde la apariencia es importante.
+Una aplicación de fotos podría usar un GridView para mostrar una galería de imágenes en miniatura, permitiendo al usuario desplazarse rápidamente por ellas y seleccionar la que desee ver a tamaño completo.
 
 #### Cuándo usar cada uno
 
-    **listView:**
-        Cuando la prioridad es mostrar información textual detallada y jerárquica.
-        Cuando se necesita una navegación secuencial a través de los elementos.
-        Ideal para listas largas donde el desplazamiento vertical es común.
-    **GridView:**
-        GridView es un widget que muestra una cuadrícula de elementos, organizando los ítems en varias columnas y filas.
-        Cuando se quiere destacar elementos visuales y facilitar la comparación rápida entre ellos.
-        Mostrar imágenes o fotos en un álbum.
-        Disposición de productos en una tienda en línea.
-        Se organiza en múltiples columnas.
-        Ideal para mostrar contenido visualmente atractivo en un formato de cuadrícula.
+**listView:**
+
+- Cuando la prioridad es mostrar información textual detallada y jerárquica.
+- Cuando se necesita una navegación secuencial a través de los elementos.
+- Ideal para listas largas donde el desplazamiento vertical es común.
+  **GridView:**
+- GridView es un widget que muestra una cuadrícula de elementos, organizando los ítems en varias columnas y filas.
+- Cuando se quiere destacar elementos visuales y facilitar la comparación rápida entre ellos.
+- Mostrar imágenes o fotos en un álbum.
+- Disposición de productos en una tienda en línea.
+- Se organiza en múltiples columnas.
+- Ideal para mostrar contenido visualmente atractivo en un formato de cuadrícula.
 
 #### Resumen de diferencias:
 
-    **Orientación:** ListView es una lista vertical; GridView es una cuadrícula de varias columnas.
-    **Uso:** ListView es ideal para listas de texto; GridView es mejor para contenido visual denso.
+**Orientación:** ListView es una lista vertical; GridView es una cuadrícula de varias columnas.
 
+**Uso:** ListView es ideal para listas de texto; GridView es mejor para contenido visual denso.
 
     ListView(
-    children: <Widget>[
-        ListTile(title: Text('Elemento 1')),
-        ListTile(title: Text('Elemento 2')),
-        ListTile(title: Text('Elemento 3')),
-    ],
+        children: <Widget>[
+            ListTile(title: Text('Elemento 1')),
+            ListTile(title: Text('Elemento 2')),
+            ListTile(title: Text('Elemento 3')),
+        ],
     );
 
 
     GridView.count(
     crossAxisCount: 2, // Dos columnas
-    children: <Widget>[
-        Container(color: Colors.red, height: 100),
-        Container(color: Colors.green, height: 100),
-        Container(color: Colors.blue, height: 100),
-        Container(color: Colors.yellow, height: 100),
-    ],
+        children: <Widget>[
+            Container(color: Colors.red, height: 100),
+            Container(color: Colors.green, height: 100),
+            Container(color: Colors.blue, height: 100),
+            Container(color: Colors.yellow, height: 100),
+        ],
     );
 
-    
 ## Widget Stack
+
 El widget **Stack** te permite superponer widgets sobre otros. Es útil cuando quieres colocar widgets encima de otro, como un texto sobre una imagen.
 
     Stack(
@@ -631,9 +642,9 @@ El widget **Stack** te permite superponer widgets sobre otros. Es útil cuando q
     |                                          |
     +------------------------------------------+
 
-
 ## AppBar
-Está creado para hacer que se represente una barra de aplicaciones. Este se trata de un espacio delimitado en el cual se pueden incluir otros muchos widgets. Aunque es muy simple es una barra que es clave para mantener una estructura básica en la aplicación. Estas siguen los principios del Flutter Material widget.
+
+Está creado para hacer que se represente una barra de aplicaciones. Este se trata de un espacio delimitado en el cual se pueden incluir otros muchos widgets. Aunque es muy simple es una barra que es clave para mantener una estructura básica en la aplicación.
 
     class MyApp extends StatelessWidget {
       @override
@@ -662,8 +673,8 @@ Está creado para hacer que se represente una barra de aplicaciones. Este se tra
     |                                          |
     +------------------------------------------+
 
-
 ## Text
+
 El widget **Text** ayuda a mostrar una línea o varias con un estilo determinado. Esto es así en lo que se refiere a tamaño, fuente, color… Es uno de los elementos clave para la creación de aplicaciones.
 
     class MyApp extends StatelessWidget {
@@ -704,7 +715,6 @@ El widget **Text** ayuda a mostrar una línea o varias con un estilo determinado
     |                                          |
     +------------------------------------------+
 
-
 ## Align
 
 El widget **Align** en Flutter alinea su widget hijo dentro de su contenedor padre según una posición especificada. Funciona utilizando la propiedad alignment, que acepta valores predefinidos como Alignment.center, Alignment.topLeft, entre otros, o coordenadas personalizadas. Es útil para ajustar la posición de un widget dentro de un espacio más grande, dándole control sobre la ubicación exacta del contenido dentro de su padre.
@@ -716,15 +726,15 @@ El widget **Align** en Flutter alinea su widget hijo dentro de su contenedor pad
         height: 100,
         color: Colors.blue, // Contenedor azul de 100x100 píxeles.
         child: Text(
-          'Alineado', 
+          'Alineado',
           style: TextStyle(color: Colors.white), // Texto dentro del contenedor.
           textAlign: TextAlign.center, // Centra el texto dentro del contenedor.
         ),
       ),
     )
 
-
 ## Image
+
 Si hablamos de los widgets básicos de Flutter no podemos dejar de lado la clase Image, que es la que hace posible que podamos mostrar una imagen. Principalmente, admite los siguientes formatos de imagen: JPEG, PNG, GIF, GIF animado, WebP, WebP animado, BMP y WBMP.
 
       @override
@@ -760,6 +770,7 @@ Si hablamos de los widgets básicos de Flutter no podemos dejar de lado la clase
     +------------------------------------------+
 
 ## Icon
+
 El widget de tipo **Icon** se encarga de la representación de un icono gráfico. En Flutter se trata de iconos que no son interactivos, por lo que si este es tu deseo tendrás que recurrir a IconButton. Además, se entiende que el icono es cuadrado, por lo que si no lo son pueden no mostrarse de la manera correcta.
 
     class MyApp extends StatelessWidget {
@@ -796,8 +807,8 @@ El widget de tipo **Icon** se encarga de la representación de un icono gráfico
     |                                          |
     +------------------------------------------+
 
+## Widget FlatButton ahora conocido como TextButton
 
-## Widget FlatButton ahora conocido como TextButton 
 Es un botón sin elevación que se utiliza comúnmente para acciones simples. Aunque FlatButton ha sido reemplazado por TextButton en versiones más recientes de Flutter, la descripción y el código siguen siendo útiles para entender cómo funcionan los botones en Flutter.
 
     class MyApp extends StatelessWidget {
@@ -839,7 +850,8 @@ Es un botón sin elevación que se utiliza comúnmente para acciones simples. Au
     |                                          |
     +------------------------------------------+
 
-## IconButton 
+## IconButton
+
 Es un widget en Flutter que combina un ícono con una acción interactiva. Es útil para crear botones en la interfaz de usuario que responden a los toques o clics del usuario.
 IconButton es un widget que muestra un ícono y permite al usuario interactuar con él, generalmente ejecutando una acción cuando se toca o se hace clic en el ícono.
 
@@ -851,8 +863,8 @@ IconButton es un widget que muestra un ícono y permite al usuario interactuar c
       },
     )
 
-
 ## NavigationBar
+
 Es un widget en Flutter que proporciona una barra de navegación en la parte inferior de la pantalla, permitiendo a los usuarios navegar entre diferentes secciones de una aplicación. Es similar al BottomNavigationBar, pero ofrece una apariencia y funcionalidad más moderna.
 
       NavigationBar(
@@ -879,8 +891,8 @@ Es un widget en Flutter que proporciona una barra de navegación en la parte inf
         },
       )
 
-
 ## Slider
+
 Es un widget en Flutter que permite a los usuarios seleccionar un valor de un rango continuo moviendo un control deslizante. Es útil para ajustes que requieren un rango de valores, como volúmenes, brillo, o cualquier configuración numérica
 
     Slider(
@@ -897,6 +909,7 @@ Es un widget en Flutter que permite a los usuarios seleccionar un valor de un ra
     )
 
 ## SimpleDialog
+
 Es un widget en Flutter que muestra un cuadro de diálogo sencillo con una lista de opciones o un mensaje. Es útil para presentar una selección de opciones o mostrar información sin necesidad de una interacción compleja.
 
     void _showDialog(BuildContext context) {
@@ -925,6 +938,7 @@ Es un widget en Flutter que muestra un cuadro de diálogo sencillo con una lista
     }
 
 ## BottomSheet
+
 Es un widget en Flutter que muestra una hoja deslizante desde la parte inferior de la pantalla. Se usa para presentar opciones adicionales, acciones o información de manera que el usuario pueda interactuar sin cambiar de pantalla.
 
       void _showBottomSheet(BuildContext context) {
@@ -960,8 +974,8 @@ Es un widget en Flutter que muestra una hoja deslizante desde la parte inferior 
         );
       }
 
-
 ## TextField
+
 Se utiliza para recibir texto del usuario. Es un campo de entrada de texto donde los usuarios pueden escribir datos. Puedes personalizar su apariencia y comportamiento según tus necesidades.
 
     class MyApp extends StatelessWidget {
@@ -1006,8 +1020,8 @@ Se utiliza para recibir texto del usuario. Es un campo de entrada de texto donde
     |                                          |
     +------------------------------------------+
 
-
 ## RaisedButton
+
 Se usaba para crear botones elevados con sombra, pero ha sido reemplazado por ElevatedButton en versiones más recientes de Flutter. Aquí te presento un ejemplo de RaisedButton y su equivalente moderno, junto con una representación visual.
 
     class MyApp extends StatelessWidget {
@@ -1051,7 +1065,8 @@ Se usaba para crear botones elevados con sombra, pero ha sido reemplazado por El
     |                                          |
     +------------------------------------------+
 
-## El FloatingActionButton (FAB) 
+## El FloatingActionButton (FAB)
+
 Es un widget en Flutter que muestra un botón flotante sobre el contenido de la interfaz de usuario. Generalmente, se usa para acciones primarias en una aplicación, como añadir un nuevo elemento o realizar una acción importante.
 
     class MyApp extends StatelessWidget {
@@ -1099,8 +1114,8 @@ Es un widget en Flutter que muestra un botón flotante sobre el contenido de la 
     |                                          |
     +------------------------------------------+
 
-
 ## ElevatedButton
+
 Es un widget en Flutter que crea un botón elevado con sombra, proporcionando un efecto visual de profundidad. Se utiliza para realizar acciones o desencadenar eventos cuando el usuario interactúa con él. Ideal para botones que necesitan destacarse en la interfaz de usuario.
 
     class MyApp extends StatelessWidget {
@@ -1147,6 +1162,7 @@ Es un widget en Flutter que crea un botón elevado con sombra, proporcionando un
     +------------------------------------------+
 
 ## Widget SliverList
+
 Este widget se utiliza para crear una lista de elementos que se pueden desplazar dentro de un CustomScrollView. Funciona bien para listas grandes con rendimiento optimizado.
 
 #### Explicación:
@@ -1198,11 +1214,13 @@ Este widget se utiliza para crear una lista de elementos que se pueden desplazar
         );
       }
 
-## Widget SliverAppBar 
-El **SliverAppBar*** es un widget en Flutter que crea una barra de aplicaciones expansible y colapsable con el scroll. Sirve para mejorar la interfaz visual en pantallas con mucho contenido desplazable.
+## Widget SliverAppBar
+
+El **SliverAppBar\*** es un widget en Flutter que crea una barra de aplicaciones expansible y colapsable con el scroll. Sirve para mejorar la interfaz visual en pantallas con mucho contenido desplazable.
 Se usa cuando necesitas una barra dinámica que cambie su tamaño o comportamiento al desplazarse. Ideal para apps con contenido largo, como tiendas o galerías.
 
 #### SliverAppBar:
+
 Es un AppBar flexible que puede expandirse y colapsarse mientras el usuario hace scroll. Los atributos importantes son:
 
     **pinned:** Si es true, la barra de aplicaciones permanece fija en la parte superior cuando se colapsa.
@@ -1257,8 +1275,8 @@ Es un AppBar flexible que puede expandirse y colapsarse mientras el usuario hace
       }
     }
 
-
 ## Card
+
 Es un widget en Flutter que proporciona una interfaz visual de contenedor con bordes redondeados y sombra, ideal para mostrar contenido agrupado, como información de un producto, una tarjeta de perfil, o cualquier otro conjunto de datos relacionado.
 
       @override
@@ -1313,6 +1331,7 @@ Es un widget en Flutter que proporciona una interfaz visual de contenedor con bo
     +------------------------------------------+
 
 ## Propiedades del Card
+
     Card(
       color: Colors.blue, // Establece el color de fondo de la tarjeta.
       elevation: 8, // Define la sombra debajo de la tarjeta, mayor valor significa más profundidad.
@@ -1329,9 +1348,9 @@ Es un widget en Flutter que proporciona una interfaz visual de contenedor con bo
       ),
       child: Text('This is a card'), // El contenido de la tarjeta, en este caso un texto simple.
     )
-    
 
 ## SizedBox
+
 Añade un espacio fijo entre los widgets. Puedes especificar el ancho y la altura del espacio.
 
     SizedBox(
@@ -1340,13 +1359,14 @@ Añade un espacio fijo entre los widgets. Puedes especificar el ancho y la altur
     )
 
 ## Widgets para generar espacios
+
 **SizedBox:** Para un espacio fijo en ancho y/o alto
 **Spacer:** Para espacio flexible y distribuido en Row o Column.
 **Padding:** Para añadir relleno dentro de un widget.
 **Margin:** Para añadir margen fuera de un widget, se utiliza dentro de Container.
 
-
 ## Spacer
+
 Es un widget en Flutter que se utiliza dentro de un widget Row, Column, o Flex para crear espacio flexible entre los widgets hijos. A diferencia de Expanded, que expande el hijo para ocupar todo el espacio disponible, Spacer crea un espacio vacío flexible que puede ser utilizado para separar otros widgets de manera proporcional.
 
     class MyApp extends StatelessWidget {
@@ -1398,9 +1418,8 @@ Es un widget en Flutter que se utiliza dentro de un widget Row, Column, o Flex p
     |                                          |
     +------------------------------------------+
 
-
-
 ## DropdownButton
+
 Es un widget en Flutter que muestra un menú desplegable de opciones, permitiendo al usuario seleccionar una de las opciones disponibles. Es útil para casos en los que se necesita ofrecer múltiples opciones en un espacio reducido.
 
     class MyApp extends StatelessWidget {
@@ -1448,6 +1467,7 @@ Es un widget en Flutter que muestra un menú desplegable de opciones, permitiend
     +------------------------------------------+
 
 ## Switch
+
 Es un widget en Flutter que representa un control de encendido/apagado. Permite al usuario alternar entre dos estados, como activado y desactivado, proporcionando una forma intuitiva de encender o apagar una opción.
 
     import 'package:flutter/material.dart';
@@ -1504,6 +1524,7 @@ Es un widget en Flutter que representa un control de encendido/apagado. Permite 
     +------------------------------------------+
 
 ## Checkbox
+
 Es un widget en Flutter que permite al usuario seleccionar o deseleccionar una opción mediante una casilla de verificación. Es útil para opciones que permiten múltiples selecciones o para confirmar decisiones.
 
     import 'package:flutter/material.dart';
@@ -1560,16 +1581,16 @@ Es un widget en Flutter que permite al usuario seleccionar o deseleccionar una o
 ## Radio Widget
 
     import 'package:flutter/material.dart';
-    
+
     class RadioExample extends StatefulWidget {
       @override
       _RadioExampleState createState() => _RadioExampleState();
     }
-    
+
     class _RadioExampleState extends State<RadioExample> {
       int _radioValue = 1;
       List<String> _radioValues = ['Option 1', 'Option 2', 'Option 3'];
-    
+
       @override
       Widget build(BuildContext context) {
         return Scaffold(
@@ -1599,8 +1620,8 @@ Es un widget en Flutter que permite al usuario seleccionar o deseleccionar una o
       }
     }
 
-
 ## Padding
+
 Es un widget en Flutter que permite agregar espacio adicional alrededor de un widget hijo. Se utiliza para proporcionar un margen interior, separando el contenido del borde del contenedor, lo que ayuda a mejorar la apariencia y la legibilidad.
 
     class MyApp extends StatelessWidget {
@@ -1646,6 +1667,7 @@ Es un widget en Flutter que permite agregar espacio adicional alrededor de un wi
     +------------------------------------------+
 
 ## Flexible
+
 Se utiliza para adaptar el tamaño de sus hijos en un contenedor flexible, como una fila (Row) o una columna (Column). Te permite definir cómo debe expandirse o contraerse un hijo en relación con otros hijos dentro de un contenedor flexible.
 El primer Flexible tiene un flex de 2, lo que significa que ocupará el doble del espacio disponible en comparación con el segundo Flexible.
 El segundo Flexible tiene un flex de 1, así que ocupará la mitad del espacio en comparación con el primer Flexible.
@@ -1713,8 +1735,8 @@ La suma de los flex se usa para dividir el espacio disponible entre los widgets 
       }
     }
 
-
 ## Expanded
+
 Es un widget en Flutter que se utiliza dentro de un widget Row, Column o Flex para hacer que su hijo ocupe el espacio disponible en el eje principal. Esto es útil para crear interfaces flexibles y adaptativas, donde el tamaño de los widgets hijos se ajusta en función del espacio disponible.
 
     class MyApp extends StatelessWidget {
@@ -1772,8 +1794,8 @@ Es un widget en Flutter que se utiliza dentro de un widget Row, Column o Flex pa
     |                                          |
     +------------------------------------------+
 
-
 ## GridView
+
 Es un widget en Flutter que muestra una cuadrícula de elementos desplazables. Es ideal para presentar una colección de elementos en una disposición de varias columnas y filas, similar a una cuadrícula de imágenes o ítems en una tienda.
 
     class MyApp extends StatelessWidget {
@@ -1833,15 +1855,15 @@ Es un widget en Flutter que muestra una cuadrícula de elementos desplazables. E
     |                                          |
     +------------------------------------------+
 
-
 ## Widget GridView.builder
-***GridView.builder** es un widget en Flutter que crea una cuadrícula de elementos de manera perezosa, generando solo los elementos visibles en pantalla. Funciona usando un itemBuilder para construir cada celda bajo demanda. Es útil para mostrar colecciones grandes o dinámicas en una cuadrícula eficiente en cuanto a memoria.
+
+**\*GridView.builder** es un widget en Flutter que crea una cuadrícula de elementos de manera perezosa, generando solo los elementos visibles en pantalla. Funciona usando un itemBuilder para construir cada celda bajo demanda. Es útil para mostrar colecciones grandes o dinámicas en una cuadrícula eficiente en cuanto a memoria.
 
 **GridView.builder** crea una cuadrícula de elementos que se generan de forma perezosa (solo los visibles son construidos).
 SliverGridDelegateWithFixedCrossAxisCount define el diseño de la cuadrícula con un número fijo de columnas (crossAxisCount).
 **itemCount** especifica el número total de elementos en la cuadrícula.
 **itemBuilder** construye cada elemento de la cuadrícula con un color y texto dinámico.
-    
+
     class MyApp extends StatelessWidget {
       @override
       Widget build(BuildContext context) {
@@ -1878,12 +1900,12 @@ SliverGridDelegateWithFixedCrossAxisCount define el diseño de la cuadrícula co
 **ListView.builder:** Organiza los elementos en una lista vertical (o horizontal) con una sola columna.
 
 **Uso:**
+Usa GridView.builder cuando necesites una disposición en cuadrícula, como en galerías de imágenes o catálogos de productos.
 
-    Usa GridView.builder cuando necesites una disposición en cuadrícula, como en galerías de imágenes o catálogos de productos.
-    Usa ListView.builder para listas verticales o horizontales, como listas de correos electrónicos o elementos de menú.
+Usa ListView.builder para listas verticales o horizontales, como listas de correos electrónicos o elementos de menú.
 
 ### Diferencia GridView.builder
-    
+
     class MyApp extends StatelessWidget {
       @override
       Widget build(BuildContext context) {
@@ -1938,163 +1960,147 @@ SliverGridDelegateWithFixedCrossAxisCount define el diseño de la cuadrícula co
     }
 
 ## Widget SingleChildScrollView
+
 Ees un widget en Flutter que permite que su único hijo sea desplazable (scrollable) cuando su contenido excede las dimensiones de su contenedor, ya sea horizontal o verticalmente. Es útil cuando el contenido de una vista no cabe en pantalla, pero no es lo suficientemente extenso para usar widgets optimizados como ListView.
 
 Explicación:
 
-    **SingleChildScrollView:** Permite desplazamiento vertical o horizontal para el contenido que no cabe en la pantalla.
-    **child:** Aquí se coloca cualquier widget como hijo, en este caso un Column con varios contenedores.
-    **List.generate(20, ...):** Genera 20 elementos para mostrar en una columna desplazable.
+**SingleChildScrollView:** Permite desplazamiento vertical o horizontal para el contenido que no cabe en la pantalla.
+
+**child:** Aquí se coloca cualquier widget como hijo, en este caso un Column con varios contenedores.
+
+**List.generate(20, ...):** Genera 20 elementos para mostrar en una columna desplazable.
 
 Este ejemplo muestra una lista vertical de contenedores que se pueden desplazar usando el SingleChildScrollView.
 
-  import 'package:flutter/material.dart';
-
-  void main() {
-    runApp(MyApp());
-  }
-
-  class MyApp extends StatelessWidget {
-    @override
-    Widget build(BuildContext context) {
-      return MaterialApp(
-        home: Scaffold(
-          appBar: AppBar(title: Text('SingleChildScrollView Example')),
-          body: SingleChildScrollView(
-            child: Column(
-              children: List.generate(20, (index) {
-                return Container(
-                  margin: EdgeInsets.all(10),
-                  color: Colors.blueAccent,
-                  height: 100,
-                  child: Center(
-                    child: Text(
-                      'Item $index',
-                      style: TextStyle(color: Colors.white, fontSize: 24),
+        @override
+        Widget build(BuildContext context) {
+        return MaterialApp(
+            home: Scaffold(
+            appBar: AppBar(title: Text('SingleChildScrollView Example')),
+                body: SingleChildScrollView(
+                    child: Column(
+                        children: List.generate(20, (index) {
+                            return Container(
+                            margin: EdgeInsets.all(10),
+                            color: Colors.blueAccent,
+                            height: 100,
+                                child: Center(
+                                child: Text(
+                                'Item $index',
+                                style: TextStyle(color: Colors.white, fontSize: 24),
+                                ),
+                                ),
+                            );
+                        }),
                     ),
-                  ),
-                );
-              }),
+                ),
             ),
-          ),
-        ),
-      );
-    }
-  }
+        );
+        }
 
+## listView.builder con desplazamiento horizontal
 
-## listView.builder con desplazamiento horizontal 
 Explicación:
 
     **ListView.builder:** Crea una lista con desplazamiento horizontal.
     **scrollDirection:** Axis.horizontal: Define la dirección del scroll como horizontal.
     **itemCount: 10:** Establece 10 elementos en la lista.
     **itemBuilder:** Genera cada elemento, con un Container para cada item, donde se personaliza el contenido (texto en este caso).
+
 Este ejemplo mostrará una lista horizontal con 10 contenedores, cada uno con un texto dentro
 
-  import 'package:flutter/material.dart';
-
-  void main() {
-    runApp(MyApp());
-  }
-
-  class MyApp extends StatelessWidget {
-    @override
-    Widget build(BuildContext context) {
-      return MaterialApp(
+        class MyApp extends StatelessWidget {
+        @override
+        Widget build(BuildContext context) {
+        return MaterialApp(
         home: Scaffold(
-          appBar: AppBar(title: Text('Horizontal ListView')),
-          body: HorizontalListView(),
+        appBar: AppBar(title: Text('Horizontal ListView')),
+        body: HorizontalListView(),
         ),
-      );
-    }
-  }
+        );
+        }
+        }
 
-  class HorizontalListView extends StatelessWidget {
-    @override
-    Widget build(BuildContext context) {
-      return Padding(
+        class HorizontalListView extends StatelessWidget {
+        @override
+        Widget build(BuildContext context) {
+        return Padding(
         padding: const EdgeInsets.all(8.0),
         child: Container(
-          height: 150, // Altura fija para el ListView horizontal
-          child: ListView.builder(
-            scrollDirection: Axis.horizontal, // Desplazamiento horizontal
-            itemCount: 10, // Número de elementos en la lista
-            itemBuilder: (context, index) {
-              return Container(
-                width: 150, // Ancho fijo para cada elemento
-                margin: EdgeInsets.all(8),
-                color: Colors.blueAccent,
-                child: Center(
-                  child: Text(
-                    'Item $index',
-                    style: TextStyle(color: Colors.white, fontSize: 20),
-                  ),
-                ),
-              );
-            },
-          ),
+        height: 150, // Altura fija para el ListView horizontal
+        child: ListView.builder(
+        scrollDirection: Axis.horizontal, // Desplazamiento horizontal
+        itemCount: 10, // Número de elementos en la lista
+        itemBuilder: (context, index) {
+        return Container(
+        width: 150, // Ancho fijo para cada elemento
+        margin: EdgeInsets.all(8),
+        color: Colors.blueAccent,
+        child: Center(
+        child: Text(
+        'Item $index',
+        style: TextStyle(color: Colors.white, fontSize: 20),
         ),
-      );
-    }
-  }
+        ),
+        );
+        },
+        ),
+        ),
+        );
+        }
+        }
 
 ## Una alternativa a ListView.builder para crear una lista horizontal
+
 En Flutter es usar el widget SingleChildScrollView con la dirección de desplazamiento configurada a horizontal y un Row para disponer los elementos.
 
 Explicación:
 
-    **SingleChildScrollView:** Este widget permite desplazamiento, en este caso configurado para ser horizontal con scrollDirection: Axis.horizontal.
-    **Row:** Dentro del **SingleChildScrollView** usamos un Row para disponer los elementos en línea horizontal.
-    **List.generate:** Crea una lista de contenedores, similar a itemBuilder en ListView.builder, pero dentro del Row.
+**SingleChildScrollView:** Este widget permite desplazamiento, en este caso configurado para ser horizontal con scrollDirection: Axis.horizontal.
+**Row:** Dentro del **SingleChildScrollView** usamos un Row para disponer los elementos en línea horizontal.
+**List.generate:** Crea una lista de contenedores, similar a itemBuilder en ListView.builder, pero dentro del Row.
 
 Esta alternativa es útil cuando no necesitas optimización avanzada para listas largas y quieres algo más sencillo para pocos elementos.
 
-  import 'package:flutter/material.dart';
-
-  void main() {
-    runApp(MyApp());
-  }
-
-  class MyApp extends StatelessWidget {
-    @override
-    Widget build(BuildContext context) {
-      return MaterialApp(
+        class MyApp extends StatelessWidget {
+        @override
+        Widget build(BuildContext context) {
+        return MaterialApp(
         home: Scaffold(
-          appBar: AppBar(title: Text('Horizontal ScrollView')),
-          body: HorizontalScrollView(),
+        appBar: AppBar(title: Text('Horizontal ScrollView')),
+        body: HorizontalScrollView(),
         ),
-      );
-    }
-  }
+        );
+        }
+        }
 
-  class HorizontalScrollView extends StatelessWidget {
-    @override
-    Widget build(BuildContext context) {
-      return SingleChildScrollView(
+        class HorizontalScrollView extends StatelessWidget {
+        @override
+        Widget build(BuildContext context) {
+        return SingleChildScrollView(
         scrollDirection: Axis.horizontal, // Desplazamiento horizontal
         child: Row(
-          children: List.generate(10, (index) {
-            return Container(
-              width: 150, // Ancho fijo para cada elemento
-              margin: EdgeInsets.all(8),
-              color: Colors.greenAccent,
-              child: Center(
-                child: Text(
-                  'Item $index',
-                  style: TextStyle(color: Colors.black, fontSize: 20),
-                ),
-              ),
-            );
-          }),
+        children: List.generate(10, (index) {
+        return Container(
+        width: 150, // Ancho fijo para cada elemento
+        margin: EdgeInsets.all(8),
+        color: Colors.greenAccent,
+        child: Center(
+        child: Text(
+        'Item $index',
+        style: TextStyle(color: Colors.black, fontSize: 20),
         ),
-      );
-    }
-  }
-
-
+        ),
+        );
+        }),
+        ),
+        );
+        }
+        }
 
 ## Divider
+
 Es un widget en Flutter que se utiliza para dividir visualmente el contenido en una lista o en un contenedor.
 Generalmente se utiliza para separar elementos de una lista o para crear una línea de separación entre secciones de la interfaz de usuario.
 
@@ -2151,6 +2157,7 @@ Generalmente se utiliza para separar elementos de una lista o para crear una lí
     +------------------------------------------+
 
 ## ListTile
+
 **ListTile** es un widget de Flutter para crear filas en listas, con soporte para íconos, texto y acciones. Úsalo dentro de ListView para mostrar elementos de manera uniforme y funcional. Es ideal para menús, configuraciones, o listas de opciones que requieran interacción.
 
 **leading:** Un ícono o widget que aparece al principio del ListTile.
@@ -2204,15 +2211,16 @@ Generalmente se utiliza para separar elementos de una lista o para crear una lí
   }
 ```
 
-## SafeArea 
+## SafeArea
+
 Es un widget de Flutter que evita que el contenido se superponga con áreas no visibles de la pantalla, como el notch o las barras de estado. Sirve para asegurar que el contenido se muestre dentro de una zona segura y visible. Úsalo siempre que quieras evitar que el contenido se oculte detrás de elementos del sistema operativo.
 
       import 'package:flutter/material.dart';
       void main() => runApp(const MyApp());
-    
+
       class MyApp extends StatelessWidget {
         const MyApp({super.key});
-    
+
         @override
         Widget build(BuildContext context) {
           return MaterialApp(
@@ -2242,8 +2250,8 @@ Es un widget de Flutter que evita que el contenido se superponga con áreas no v
         }
       }
 
-
 ## Widget GestureDetector
+
 **GestureDetector** es un widget en Flutter que detecta gestos del usuario, como toques, deslizamientos o pulsaciones largas. Funciona capturando gestos definidos (como onTap, onDoubleTap, etc.) y ejecutando una acción. Es útil para hacer interactivos los widgets, permitiendo responder a eventos táctiles en la interfaz.
 
     GestureDetector(
@@ -2262,16 +2270,17 @@ Es un widget de Flutter que evita que el contenido se superponga con áreas no v
         color: Colors.blue, // Contenedor azul.
         child: Center(
           child: Text(
-            'Toca aquí', 
+            'Toca aquí',
             style: TextStyle(color: Colors.white, fontSize: 18),
           ),
         ),
       ),
     )
 
-## InkResponse 
+## InkResponse
+
 Es un widget en Flutter que detecta gestos y proporciona una retroalimentación visual, como un efecto de onda (ripple) al ser tocado. Funciona como un detector de gestos, similar a GestureDetector, pero con animaciones visuales integradas. Es útil para crear botones interactivos con efectos táctiles. Además, permite personalizar la respuesta visual al interactuar.
-    
+
     InkResponse(
       onTap: () { // Función que se ejecuta al tocar el widget.
         print('InkResponse tocado!');
@@ -2286,20 +2295,20 @@ Es un widget en Flutter que detecta gestos y proporciona una retroalimentación 
         color: Colors.blue, // Contenedor azul.
         child: Center(
           child: Text(
-            'Toca aquí', 
+            'Toca aquí',
             style: TextStyle(color: Colors.white, fontSize: 18),
           ),
         ),
       ),
     )
 
-
 ## Navegar entre páginas en Flutte
 
 #### 1. Crear dos pantallas
+
 Primero, define dos pantallas (widgets) entre las que quieras navegar.
 FirstPage.dart
-    
+
     import 'package:flutter/material.dart';
     class FirstPage extends StatelessWidget {
       @override
@@ -2325,7 +2334,7 @@ FirstPage.dart
     }
 
 #### Archivo SecondPage.dart
-    
+
       @override
       Widget build(BuildContext context) {
         return Scaffold(
@@ -2345,7 +2354,7 @@ FirstPage.dart
       }
 
 ## Configurar la navegación en tu main.dart
-    
+
     class MyApp extends StatelessWidget {
       @override
       Widget build(BuildContext context) {
@@ -2362,10 +2371,10 @@ FirstPage.dart
 ### Notas:
 
     // Paquete de Flutter para construir interfaces de usuario
-    import 'package:flutter/material.dart'; 
-    
+    import 'package:flutter/material.dart';
+
     /**
-     * 
+     *
      * La función void main() Es el punto de entrada de una aplicación en Dart y Flutter. Es donde el programa comienza a ejecutarse.
      * main es la funcion principal de la app en Flutter que no puede ser sobrescrita por otras clases y ademas no devuelve ningun valor.
      */
@@ -2373,7 +2382,7 @@ FirstPage.dart
       // runApp es la función que se encarga de iniciar la app
       runApp( const MiWidget()); // Punto de entrada de la app, ejecuta el widget principal
     }
-    
+
     /**
      * En Flutter, dentro de main() normalmente se llama a runApp(), que inicia la aplicación y construye la interfaz de usuario.
       Ejemplo básico:
@@ -2383,8 +2392,8 @@ FirstPage.dart
       - main(): Siempre debe estar presente en todo programa de Dart.
       - runApp(): Arranca la aplicación Flutter.
      */
-    
-    
+
+
     /**
      * class MiWidget extends StatefulWidget define una clase que extiende de la clase StatefulWidget.
      * extends StatefulWidget: Significa que la clase MiWidget hereda de la clase StatefulWidget.
@@ -2396,11 +2405,11 @@ FirstPage.dart
       const MiWidget({super.key});
       /**
        * const MiWidget({super.key});
-       * Crea una instancia inmutable del widget. 
+       * Crea una instancia inmutable del widget.
        * Pasa la clave (key) al constructor de la clase padre (StatefulWidget), lo que ayuda a Flutter a identificar el widget en el árbol de widgets.
        */
-    
-    
+
+
     /**
      * override indica que la clase MiWidget es una clase heredada de la clase StatefulWidget
      * Es una anotación en Dart que indica que un método en una clase hija está reemplazando un método con el mismo nombre en la clase padre.
@@ -2408,20 +2417,20 @@ FirstPage.dart
      */
       @override
       /*
-      * La línea _MiWidgetState createState() => _MiWidgetState(); 
+      * La línea _MiWidgetState createState() => _MiWidgetState();
       * Crea una instancia del estado _MiWidgetState asociado con el widget MiWidget. Este estado es el que gestionará el comportamiento y la apariencia del widget mientras está en uso.
       */
       _MiWidgetState createState() => _MiWidgetState(); // Crea el estado para este widget
     }
-    
-    
+
+
     /**
-     * class _MiWidgetState extends State<MiWidget> define una clase privada _MiWidgetState que extiende la clase State de Flutter. 
+     * class _MiWidgetState extends State<MiWidget> define una clase privada _MiWidgetState que extiende la clase State de Flutter.
      * Esta clase gestiona el estado del widget MiWidget, permitiendo que el widget se actualice y reconstruya cuando cambian sus datos internos.
      */
     class _MiWidgetState extends State<MiWidget> {
       bool _isExpanded = false; // Variable privada para controlar si está expandido o no
-    
+
     /**
      * Es una funcion privada que alterna el valor de _isExpanded y actualiza la UI
      * void: Indica que la función no devuelve ningún valor.
@@ -2435,7 +2444,7 @@ FirstPage.dart
               !_isExpanded; // Alterna el valor de _isExpanded y actualiza la UI
         });
       }
-    
+
       /**
        * Widget build(BuildContext context) es un método que se llama cada vez que el estado del widget cambia.
        * El método Construye y devuelve la interfaz de usuario del widget utilizando el contexto actual de la aplicación
@@ -2450,8 +2459,8 @@ FirstPage.dart
       }
     }
 
+#### Definir funciones y llamarlas
 
-#### Definir funciones  y llamarlas
     // Una función que suma dos números y devuelve el resultado
     int sumar(int a, int b) {
       return a + b;
@@ -2464,20 +2473,21 @@ FirstPage.dart
      */
 
 #### Puedes llamar a esta función en tu código así
+
     void main() {
       int resultado = sumar(5, 3);
       print(resultado); // Imprime 8
-    
+
       // Llama a la función saludar y muestra su resultado
       String saludo = saludar('Juan');
       print(saludo); // Imprime "Hola, Juan!"
-    
+
       imprimirMensaje('¡Hola, mundo!');
       // Imprime "¡Hola, mundo!" en la consola
     }
 
+#### Función que devuelve una cadena de texto
 
-####  Función que devuelve una cadena de texto
     /**
      * Una función que recibe un nombre y devuelve un saludo personalizado
      * String: Tipo de valor que la función devolverá (una cadena de texto).
@@ -2489,8 +2499,8 @@ FirstPage.dart
       return 'Hola, $nombre!';
     }
 
-
 #### Función que no devuelve un valor
+
     /**
      * Una función que imprime un mensaje en la consola
      * void: La función no devuelve ningún valor.
@@ -2501,5 +2511,3 @@ FirstPage.dart
     void imprimirMensaje(String mensaje) {
       print(mensaje);
     }
-
-
