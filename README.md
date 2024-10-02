@@ -59,6 +59,36 @@ Utilizado para aplicaciones que siguen las directrices de diseño Material de Go
 
 Utilizado para aplicaciones con estilo iOS, siguiendo las directrices de diseño de Cupertino.
 
+## Widgets Sin Hijos
+
+A continuación, te doy una lista revisada de widgets en Flutter que no tienen hijos (o que son comúnmente usados sin hijos):
+
+- **SizedBox:** Un widget que define un espacio de tamaño fijo, pero no requiere un hijo.
+- **Spacer:** Crea un espacio flexible entre widgets.
+- **Divider:** Muestra una línea horizontal para separar contenido.
+- **VerticalDivider:** Similar a Divider, pero muestra una línea vertical.
+- **CircularProgressIndicator:** Un indicador de carga circular que no requiere un hijo.
+- **LinearProgressIndicator:** Un indicador de progreso lineal sin hijos.
+- **Opacity:** Controla la opacidad de su hijo, pero puede ser usado sin un hijo.
+- **Material:** Aplica un material design, pero puede no tener un hijo.
+- **InkWell:** Un área que responde a toques, puede ser utilizado sin un hijo, pero comúnmente se usa con uno.
+- **Container:** Aunque puede tener un hijo, también se puede usar sin él.
+
+    
+## Widgets que Pueden Tener Hijos
+
+- **Column:** Organiza sus hijos en una columna vertical.
+- **Row:** Organiza sus hijos en una fila horizontal.
+- **ListView:** Crea una lista desplazable de widgets.
+- **GridView:** Muestra sus hijos en una cuadrícula.
+- **Stack:** Permite apilar widgets unos sobre otros.
+- **Wrap:** Organiza sus hijos en una fila o columna, envolviendo los widgets a la siguiente línea si es necesario.
+- **Container:** Puede contener un solo hijo, pero se puede anidar para tener múltiples hijos.
+- **Form:** Utilizado para agrupar formularios y sus campos.
+- **ExpansionPanelList:** Un widget que muestra una lista de paneles expandibles.
+- **TabBarView:** Permite mostrar diferentes widgets para cada pestaña.
+
+    
 #### Diferencias entre:
 
 **`SliverAppBar, SliverList, SliverGrid, GridView y CustomScrollView`**
