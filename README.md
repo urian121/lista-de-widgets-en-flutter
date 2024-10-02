@@ -73,6 +73,18 @@ A continuación, te doy una lista revisada de widgets en Flutter que no tienen h
 - **Material:** Aplica un material design, pero puede no tener un hijo.
 - **InkWell:** Un área que responde a toques, puede ser utilizado sin un hijo, pero comúnmente se usa con uno.
 - **Container:** Aunque puede tener un hijo, también se puede usar sin él.
+    
+      @override
+        Widget build(BuildContext context) {
+          return Column(
+            children: [
+              SizedBox(height: 20), // Espacio fijo
+              Divider(), // Línea divisoria
+              CircularProgressIndicator(), // Indicador de carga
+              Spacer(), // Espacio flexible
+            ],
+          );
+        }
 
     
 ## Widgets que Pueden Tener Hijos
@@ -87,6 +99,39 @@ A continuación, te doy una lista revisada de widgets en Flutter que no tienen h
 - **Form:** Utilizado para agrupar formularios y sus campos.
 - **ExpansionPanelList:** Un widget que muestra una lista de paneles expandibles.
 - **TabBarView:** Permite mostrar diferentes widgets para cada pestaña.
+
+        @override
+        Widget build(BuildContext context) {
+          return Scaffold(
+            appBar: AppBar(title: const Text('Ejemplo de Widgets con Hijos')),
+            body: Column(
+              children: [
+                Row(
+                  children: [
+                    Icon(Icons.home),
+                    Text('Inicio'),
+                  ],
+                ),
+                ListView(
+                  children: [
+                    ListTile(title: Text('Opción 1')),
+                    ListTile(title: Text('Opción 2')),
+                    ListTile(title: Text('Opción 3')),
+                  ],
+                ),
+                GridView.count(
+                  crossAxisCount: 2,
+                  children: [
+                    Container(color: Colors.red, height: 100),
+                    Container(color: Colors.green, height: 100),
+                    Container(color: Colors.blue, height: 100),
+                    Container(color: Colors.yellow, height: 100),
+                  ],
+                ),
+              ],
+            ),
+          );
+        }
 
     
 #### Diferencias entre:
