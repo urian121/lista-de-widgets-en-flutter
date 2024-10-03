@@ -338,6 +338,41 @@ Icons es una clase en Flutter que contiene una serie de íconos de Material Desi
 - Este comando añade el paquete 'shared_preferences' a las dependencias del proyecto y lo incluye en el archivo pubspec.yaml.
   flutter pub add nombre-del-paquete
 
+#### Widget SnackBar
+Es un widget que muestra una breve notificación en la parte inferior de la pantalla. Es útil para dar retroalimentación o notificaciones rápidas al usuario, como confirmaciones, errores o advertencias. Desaparece automáticamente después de un tiempo o puede cerrarse manualmente. Se activa usando ScaffoldMessenger para manejar su aparición y desaparición. El SnackBar es ideal para retroalimentaciones rápidas que no interrumpen la interacción del usuario con la app.
+
+
+##### Ejemplos de Uso
+
+- Mostrar un SnackBar básico:
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Operación exitosa!'))
+        );
+
+- SnackBar con acción (botón):
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Item eliminado'),
+            action: SnackBarAction(
+              label: 'DESHACER',
+              onPressed: () {
+                // Código para deshacer la acción
+              },
+            ),
+          ),
+        );
+
+
+- SnackBar personalizado con duración:
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Guardado correctamente'),
+            duration: Duration(seconds: 2), // Tiempo que permanece visible
+            backgroundColor: Colors.green,  // Color de fondo
+          ),
+        );
+
+
 #### Widget Scaffold
 
 Es un widget que Proporciona la estructura básica para la mayoría de las aplicaciones móviles, incluyendo elementos como barras de navegación, cajones de navegación (drawers) y barras de estado. Esencialmente, es el lienzo en el que pintas tu interfaz de usuario.
